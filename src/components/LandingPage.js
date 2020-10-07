@@ -28,16 +28,25 @@ const LandingPage = () => {
       gsap.to(btn.current, { transform: "translate(100%)", duration: 1, ease: Power4.easeOut });
     };
 
+    const goTo = (arg) => {
+        if(typeof document !== 'undefined') {
+            let el = document.querySelector(arg);
+            el.scrollIntoView({behavior: "smooth"});
+        }
+    };
+
     return (<main className="landing-page">
         <Img fluid={data.slider.childImageSharp.fluid} alt="Slider" imgStyle={{objectPosition: "10% 10%"}}/>
         <Menu />
         <div className="landing-container">
-            <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
-            <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług</h2>
-            <button className="button button-landing" onMouseOver={buttonAnimation} onMouseLeave={buttonLeave}>
-                Skontaktuj się z nami
-                <div ref={btn} className="hover">Wypełnij formularz</div>
-            </button>
+            <div className="landing-inner">
+                <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
+                <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług</h2>
+                <button className="button button-landing" onMouseOver={buttonAnimation} onMouseLeave={buttonLeave} onClick={() => goTo(".form-section")}>
+                    Skontaktuj się z nami
+                    <div ref={btn} className="hover">Wypełnij formularz</div>
+                </button>
+            </div>
             <div className="social-media">
                 <img src={require("../../static/img/facebook.png")} alt="facebook" />
                 <img src={require("../../static/img/twitter.png")} alt="twitter" />

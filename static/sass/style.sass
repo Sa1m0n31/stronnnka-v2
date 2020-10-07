@@ -9,6 +9,8 @@ $border: #AEAEAE
 $blackFont: #363636
 $btnHover: #F9D6DB
 $buttonBorder: #707070
+$line: #E6E5E5
+$portfolioImg: #707070
 
 // Mixins
 
@@ -96,9 +98,15 @@ ul
       width: 70vw
       height: 100%
       justify-content: space-evenly
+      align-items: center
 
       li
         +center
+        cursor: pointer
+        height: fit-content
+
+      li:hover
+        color: $red
 
 // Landing page
 
@@ -119,8 +127,15 @@ ul
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: flex-start
+    justify-content: center
     height: calc(100vh - 100px)
+
+    .landing-inner
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: -100px
+
 
   h1, h2, button, menu
     position: relative
@@ -142,6 +157,7 @@ ul
   .button-landing
     width: 25vw
     height: 80px
+    justify-self: center
     +redBtn
 
     .hover
@@ -231,11 +247,13 @@ ul
     text-align: center
     font-weight: 900
     font-size: 35px
+    margin: 30px 0
 
   .dlaczego-my-inner
     position: relative
-    margin: 110px 0
+    margin: 50px 0
     width: 90vw
+    height: 1630px
 
     h3
       position: absolute
@@ -510,8 +528,88 @@ ul
 
 
     .right
-      width: 25vw
+      width: 30vw
 
       p
         text-align: right
         line-height: 35px
+
+// Portfolio
+
+.portfolio
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $blackFont
+
+  .portfolio-header
+    padding: 20px 0 40px 0
+    border-bottom: 1px solid $line
+    text-align: center
+    width: 100%
+    position: relative
+
+    h2
+      font-size: calc(25px + 40 * ((100vw - 500px)/(1500)))
+
+    h3
+      font-size: calc(16px + 15 * ((100vw - 500px)/(1500)))
+      font-weight: 100
+
+    .portfolio-white
+      width: 44px
+      height: 34px
+      position: absolute
+      bottom: -17px
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 5
+      background-color: $white
+
+      img
+        width: 34px
+        height: 100%
+        z-index: 6
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+
+  .portfolio-inner
+    margin: 60px 0
+    display: flex
+    justify-content: space-evenly
+    width: 80vw
+
+    .portfolio-item
+      position: relative
+      height: 266px
+
+      .portfolio-overlay
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-color: rgba(0, 0, 0, .6)
+        color: $white
+        +center
+        flex-direction: column
+        opacity: 0
+
+        h3
+          margin: 10px 0
+          font-size: calc(18px + 10 * ((100vw - 500px)/(1500)))
+
+        h4
+          margin: 10px 0
+          font-size: calc(14px + 5 * ((100vw - 500px)/(1500)))
+          font-weight: 100
+          padding: 0 10px
+          text-align: center
+
+        img
+          position: absolute
+          bottom: 15px
+          right: 15px
+
