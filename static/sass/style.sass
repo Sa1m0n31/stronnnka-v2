@@ -11,6 +11,7 @@ $btnHover: #F9D6DB
 $buttonBorder: #707070
 $line: #E6E5E5
 $portfolioImg: #707070
+$planHover: #F9D6DB
 
 // Mixins
 
@@ -72,6 +73,10 @@ ul
 
 .d-none
   display: none
+
+.choice
+  background-color: $planHover
+  border: 2px solid #BB293D
 
 // Menu
 
@@ -439,6 +444,11 @@ ul
       display: flex
       justify-content: space-between
 
+      .plan:hover
+        -webkit-box-shadow: 0 0 41px 10px rgba(0,0,0,0.75)
+        -moz-box-shadow: 0 0 41px 10px rgba(0,0,0,0.75)
+        box-shadow: 0 0 41px 10px rgba(0,0,0,0.75)
+
       .plan
         width: 20vw
         height: 500px
@@ -446,6 +456,13 @@ ul
         display: flex
         flex-direction: column
         align-items: center
+        cursor: pointer
+        position: relative
+
+        .gwiazdka
+          position: absolute
+          top: -50px
+          right: -50px
 
         .button-opcje
           +redBtn
@@ -488,9 +505,10 @@ ul
         margin-bottom: 100px
         display: grid
         grid-template-columns: 25vw 25vw
-        grid-template-rows: 70px 200px 80px
+        grid-template-rows: 70px 200px 30px 80px
 
         input
+          position: relative
           width: 50%
           height: fit-content
           border: none
@@ -517,6 +535,12 @@ ul
         textarea:focus
           outline: none !important
 
+        .disclaimer
+          margin: 20px 0
+          font-size: 14px
+          grid-row: 3
+          grid-column: 1 / span 2
+
         .button-submit
           +redBtn
           grid-column: 2
@@ -533,6 +557,12 @@ ul
       p
         text-align: right
         line-height: 35px
+
+      .errors
+        color: $red
+        font-size: 14px
+        margin-top: 40px
+        line-height: 20px
 
 // Portfolio
 
@@ -585,6 +615,9 @@ ul
       position: relative
       height: 266px
 
+      .portfolio-overlay:hover
+        opacity: 1
+
       .portfolio-overlay
         position: absolute
         top: 0
@@ -596,6 +629,7 @@ ul
         +center
         flex-direction: column
         opacity: 0
+        transition: .6s
 
         h3
           margin: 10px 0
@@ -613,3 +647,124 @@ ul
           bottom: 15px
           right: 15px
 
+// Lighthouse
+
+.lighthouse
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $blackFont
+  position: relative
+
+  .medal
+    position: absolute
+    top: 100px
+    right: 50px
+    transform: scale(.8)
+
+  h2
+    font-size: calc(25px + 40 * ((100vw - 500px)/(1500)))
+
+  h3
+    font-size: calc(16px + 15 * ((100vw - 500px)/(1500)))
+
+  .first-row
+    width: 60vw
+    display: grid
+    grid-template-columns: 45% 50%
+    grid-template-rows: 50px 150px
+    grid-row-gap: 10px
+    align-self: flex-start
+    margin: 50px 0 0 5vw
+
+    .lighthouse-img
+      grid-column: 1
+      grid-row: 1 / span 2
+      transform: scale(.8)
+
+    h4
+      grid-column: 2
+      grid-row: 1
+      align-self: flex-end
+
+    p
+      grid-column: 2
+      grid-row: 2
+
+  .second-row
+    margin: 50px 50px 50px 0
+    width: 75vw
+    display: grid
+    grid-template-columns: 35% 55%
+    grid-column-gap: 5%
+    grid-template-rows: 50px 150px
+    grid-row-gap: 10px
+    align-self: flex-end
+
+    .pomiary
+      grid-column: 2
+      grid-row: 1 / span 2
+
+    h4
+      grid-column: 1
+      grid-row: 1
+      text-align: right
+      align-self: flex-end
+
+    p
+      text-align: right
+      grid-column: 1
+      grid-row: 2
+
+  .third-row
+    align-self: flex-start
+    margin: 50px 0 80px 90px
+
+    h3, h4
+      font-size: calc(25px + 15 * ((100vw - 500px)/(1500)))
+
+// Footer
+
+.footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $white
+  background-color: $red
+
+  .footer-inner
+    display: flex
+    justify-content: space-around
+
+    .column
+      width: 25vw
+      margin: 20px 0
+
+      .social-media
+        display: flex
+        justify-content: center
+
+        a
+          margin: 0 10px
+
+      h5
+        font-size: calc(15px + 5 * ((100vw - 500px)/(1500)))
+        margin: 20px 0
+        text-align: center
+
+      ul
+        display: flex
+        flex-direction: column
+        font-size: 14px
+        text-align: center
+
+        li
+          margin: 5px 0
+
+  .footer-bottom
+    width: 80vw
+    border-top: 1px solid $white
+
+    h6
+      text-align: center
+      margin: 20px 0

@@ -10,11 +10,11 @@ const Portfolio = () => {
     const [active2, setActive2] = useState(false);
 
     const handleHover = (el) => {
-        gsap.fromTo(el.current, {opacity: 0}, {opacity: 1, duration: .5});
+        //gsap.fromTo(el.current, {opacity: 0}, {opacity: 1, duration: .5});
     };
 
     const handleLeave = (el) => {
-        gsap.fromTo(el.current, {opacity: 1}, {opacity: 0, duration: .5});
+        //gsap.fromTo(el.current, {opacity: 1}, {opacity: 0, duration: .5});
     };
 
     return (<section className="portfolio">
