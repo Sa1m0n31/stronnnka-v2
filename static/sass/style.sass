@@ -8,6 +8,7 @@ $darkWhite: #F8F8F8
 $border: #AEAEAE
 $blackFont: #363636
 $btnHover: #F9D6DB
+$buttonBorder: #707070
 
 // Mixins
 
@@ -22,6 +23,19 @@ $btnHover: #F9D6DB
   left: 50%
   transform: translate(-50% -50%)
 
+=redBtn()
+  background-color: $red
+  width: 25vw
+  height: 80px
+  border-radius: 80px
+  color: $white
+  text-transform: uppercase
+  font-weight: 700
+  font-size: 1.2em
+  margin-top: 70px
+  overflow: hidden
+  +center
+
 
 // Global
 
@@ -29,6 +43,9 @@ $btnHover: #F9D6DB
   margin: 0
   padding: 0
   font-family: Roboto, 'sans-serif'
+
+body
+  overflow-x: hidden !important
 
 .button
   border: none
@@ -47,6 +64,12 @@ ul
 
 .red
   color: $red
+
+.no-border
+  border: none !important
+
+.d-none
+  display: none
 
 // Menu
 
@@ -111,23 +134,15 @@ ul
     text-align: center
 
   h2
-    margin: 40px 70px 0 70px
-    font-weight: 400
+    margin: 40px 90px 0 90px
+    font-weight: 100
     font-size: calc(16px + 8 * ((100vw - 500px)/(1500)))
     text-align: center
 
   .button-landing
-    background-color: $red
     width: 25vw
     height: 80px
-    border-radius: 80px
-    color: $white
-    text-transform: uppercase
-    font-weight: 700
-    font-size: 1.2em
-    margin-top: 70px
-    overflow: hidden
-    +center
+    +redBtn
 
     .hover
       position: absolute
@@ -224,22 +239,23 @@ ul
 
     h3
       position: absolute
-      right: 20px
-      top: 30px
+      right: 80px
+      top: 10px
       border-right: 20px solid #DFDFDF
       padding-right: 10px
       font-size: 38px
       font-family: "Roboto Thin", sans-serif
       font-weight: 100
 
-    #line1
-      margin: -140px 0 0 170px
-
     .powod-item
-      width: 50vw
+      width: 700px
       display: grid
       grid-template-columns: 40% 60%
       grid-template-rows: 50px 150px
+      grid-column-gap: 20px
+      position: relative
+      z-index: 4
+      background-color: $white
 
       .powod-img
         grid-column: 1
@@ -252,9 +268,250 @@ ul
       h4
         grid-column: 2
         grid-row: 1
+        align-self: flex-end
+        margin-bottom: 5px
 
       p
         grid-column: 2
         grid-row: 2
-        font-weight: 400
+        font-weight: 100
+        position: relative
+        z-index: 100
+        font-family: "Roboto Thin", sans-serif
 
+    .arrow
+      position: absolute
+      top: 110px
+      left: 220px
+      z-index: -11
+
+    .arrow2
+      position: absolute
+      top: 520px
+      left: 270px
+      z-index: 20
+
+    .arrow3
+      position: absolute
+      top: 1020px
+      left: 250px
+
+    .arrow4
+      position: absolute
+      top: 1420px
+      left: 490px
+
+    .arrow5
+      position: absolute
+      top: 1270px
+      left: 1100px
+
+    .powod-item:nth-child(4)
+      position: absolute
+      top: 400px
+      left: 10px
+
+    .powod-item:nth-child(5)
+      position: absolute
+      top: 260px
+      left: 800px
+      grid-template-columns: 300px 300px
+
+    .powod-item:nth-child(7)
+      position: absolute
+      top: 800px
+      left: 0
+
+    .powod-item:nth-child(9)
+      position: absolute
+      top: 1180px
+      left: 200px
+
+    .powod-item:nth-child(11)
+      position: absolute
+      top: 1400px
+      left: 700px
+
+    .powod-item:nth-child(13)
+      position: absolute
+      top: 1000px
+      left: 900px
+      grid-template-columns: 300px 200px
+
+// Form
+
+.form-section
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 50px 0 0 0
+  color: #363636
+
+  h2
+    font-size: calc(25px + 30 * ((100vw - 500px)/(1500)))
+
+  h3
+    font-size: calc(18px + 15 * ((100vw - 500px)/(1500)))
+    font-weight: 100
+
+  .first-row
+    width: 80%
+    display: flex
+    height: 100px
+    margin-top: 50px
+
+    .left
+      width: 70vw
+
+      .options-strony
+        display: flex
+        align-items: center
+
+      h4
+        font-weight: 400
+        font-size: 25px
+        margin: 20px 0
+
+      label
+        display: flex
+        cursor: pointer
+        margin: 0 30px
+        align-items: center
+
+      label:first-child
+        margin-left: 0
+
+      .button-option
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: $white
+        border: 5px solid $buttonBorder
+        margin: 0 5px 0 0
+        position: relative
+
+        img
+          position: absolute
+          top: 0
+          left: 0
+          width: 20px
+          height: 20px
+
+    .right
+      width: 25vw
+      text-align: right
+
+      h4
+        font-size: calc(16px + 20 * ((100vw - 500px)/(1500)))
+
+      h5
+        font-size: calc(16px + 40 * ((100vw - 500px)/(1500)))
+
+  .second-row
+    width: 80%
+
+    h4
+      width: 100%
+      text-align: left
+      margin: 30px 0 50px 0
+      font-size: 30px
+      font-weight: 400
+
+    .plany-grid
+      display: flex
+      justify-content: space-between
+
+      .plan
+        width: 20vw
+        height: 500px
+        box-shadow: 0 0 8px #00000029
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .button-opcje
+          +redBtn
+          width: 75%
+          height: 60px
+          font-size: calc(14px + 6 * ((100vw - 500px)/(1500)))
+          margin: 40px 0 20px 0
+
+        .description
+          margin: 20px 0
+
+        .attributes
+          display: flex
+          flex-direction: column
+
+          li
+            text-align: center
+            margin: 10px 0
+            padding: 0 10px
+
+        .button-wybierz
+          width: 75%
+          height: 60px
+          border-radius: 60px
+          border: 2px solid $red
+          background-color: transparent
+          margin: 40px 0
+
+  .third-row
+    display: flex
+    margin: 150px 0 0 0
+
+    .left
+      width: 60vw
+      margin-left: 70px
+
+      form
+        width: 90%
+        position: relative
+        margin-bottom: 100px
+        display: grid
+        grid-template-columns: 25vw 25vw
+        grid-template-rows: 70px 200px 80px
+
+        input
+          width: 50%
+          height: fit-content
+          border: none
+          border-bottom: 2px solid $red
+          outline: none
+          margin: 40px 20px 10px 20px
+          padding: 0 5px 10px 5px
+          font-size: 20px
+
+        input:first-child
+          margin-left: 0
+
+        textarea
+          grid-column: 1 / span 2
+          grid-row: 2
+          width: calc(60vw * 0.8)
+          height: 150px
+          resize: none
+          margin: 20px 0
+          border: 1px solid #C5C5C5
+          padding: 2%
+          font-size: 20px
+
+        textarea:focus
+          outline: none !important
+
+        .button-submit
+          +redBtn
+          grid-column: 2
+          grid-row: 3
+          height: 50px
+          width: 200px
+          margin-top: 40px
+          justify-self: end
+
+
+    .right
+      width: 25vw
+
+      p
+        text-align: right
+        line-height: 35px
