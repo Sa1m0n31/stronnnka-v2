@@ -4,7 +4,7 @@ const Lighthouse = () => {
     return (<section className="lighthouse">
         <h2>Maksymalna wydajność stron</h2>
         <h3>Doskonały performance, pełna responsywność i optymalizacja pod SEO</h3>
-        <img src={require("../../static/img/medal.png")} alt="medal" className="medal" />
+        <img src={require("../../static/img/medal.png")} alt="medal" className="medal mobile-only" />
         <div className="first-row">
             <img src={require("../../static/img/lighthouse-logo.png")} alt="lighthouse" className="lighthouse-img" />
             <h4>Lighthouse</h4>

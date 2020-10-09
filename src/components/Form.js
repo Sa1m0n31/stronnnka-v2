@@ -174,7 +174,7 @@ export default class Form extends React.Component {
                         </label>
                     </div>
                 </div>
-                <div className="right">
+                <div className="right only-700">
                     <h4>Orientacyjna cena:</h4>
                     <h5 className="price red">250 zł</h5>
                 </div>
