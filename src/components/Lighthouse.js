@@ -11,7 +11,7 @@ const Lighthouse = () => {
             <p>Do pomiaru poziomów wydajności witryny może posłużyć narzędzie Lighthouse. Prosty w obsłudze dodatek pokaże nam jakie wartości przyjmuje dana strona, np. w zakresie pozycjonowania SEO lub wydajności strony.</p>
         </div>
         <div className="second-row">
-            <img src={require("../../static/img/pomiary.png")} alt="pomiary" className="pomiary" />
+            <img src={require("../../static/img/lighthouse.png")} alt="pomiary" className="pomiary" />
             <h4>Przykładowe pomiary dla jednej z naszych stron</h4>
             <p>Jak widać na załączonym obrazku, pomiary na jednym ze zrealizowanych przez nas projektów osiągają prawie maksymalną wartość przy każdym elemencie.</p>
         </div>

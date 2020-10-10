@@ -1,24 +1,33 @@
 import React from "react";
 
+import Cards from "./Cards";
+import plany from "../helpers/plany";
+
+import { gsap } from 'gsap/all';
+
 export default class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            stronaPortfolio: false,
+            stronaPortfolio: true,
             stronaFirmowa: false,
             sklepInternetowy: false,
             aplikacjaWww: false,
+            option: "strona portfolio",
             standard: false,
             profesjonalny: false,
             ultimate: false,
             email: "",
             phoneNumber: "",
             msg: "",
-            formError: ""
+            formError: "",
+            price: 400
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePlany = this.handlePlany.bind(this);
+        this.handleAnimation = this.handleAnimation.bind(this);
+        this.handlePrice = this.handlePrice.bind(this);
     }
 
     handleChange(e, name) {
@@ -36,36 +45,50 @@ export default class Form extends React.Component {
                         stronaPortfolio: true,
                         stronaFirmowa: false,
                         sklepInternetowy: false,
-                        aplikacjaWww: false
-                    });
+                        aplikacjaWww: false,
+                        option: "strona portfolio"
+                    }, this.handleAnimation);
                     break;
                 case "stronaFirmowa":
                     this.setState({
                         stronaFirmowa: true,
                         stronaPortfolio: false,
                         sklepInternetowy: false,
-                        aplikacjaWww: false
-                    });
+                        aplikacjaWww: false,
+                        option: "strona firmowa"
+                    }, this.handleAnimation);
                     break;
                 case "sklepInternetowy":
                     this.setState({
                         sklepInternetowy: true,
                         stronaPortfolio: false,
                         stronaFirmowa: false,
-                        aplikacjaWww: false
-                    });
+                        aplikacjaWww: false,
+                        option: "sklep internetowy"
+                    }, this.handleAnimation);
                     break;
                 case "aplikacjaWww":
                     this.setState({
                         aplikacjaWww: true,
                         stronaPortfolio: false,
                         stronaFirmowa: false,
-                        sklepInternetowy: false
-                    });
+                        sklepInternetowy: false,
+                        option: "aplikacja www"
+                    }, this.handleAnimation);
                     break;
                 default:
                     break;
             }
+        }
+    }
+
+    handleAnimation() {
+        this.handlePrice();
+        if(typeof document !== 'undefined') {
+            const planyGrid = document.querySelector(".plany-grid");
+            const tl = gsap.timeline();
+            tl.fromTo(planyGrid, {x: 0}, { x: -2000, duration: .2 })
+                .fromTo(planyGrid, {x: 2200}, { x: 0, duration: .2, delay: .2 });
         }
     }
 
@@ -122,21 +145,43 @@ export default class Form extends React.Component {
                 standard: true,
                 profesjonalny: false,
                 ultimate: false
-            });
+            }, this.handlePrice);
         }
         else if(plan === "profesjonalny") {
             this.setState({
                 profesjonalny: true,
                 standard: false,
                 ultimate: false
-            });
+            }, this.handlePrice);
         }
         else {
             this.setState({
                 ultimate: true,
                 standard: false,
                 profesjonalny: false
-            });
+            }, this.handlePrice);
+        }
+    }
+
+    handlePrice() {
+        switch(this.state.option) {
+            case "strona portfolio":
+                if(this.state.standard) this.setState({price: 400});
+                else if(this.state.profesjonalny) this.setState({price: 600});
+                else this.setState({price: 800});
+                break;
+            case "strona firmowa":
+                if(this.state.standard) this.setState({price: 500});
+                else if(this.state.profesjonalny) this.setState({price: 700});
+                else this.setState({price: 1000});
+                break;
+            case "sklep internetowy":
+                if(this.state.standard) this.setState({price: 1000});
+                else if(this.state.profesjonalny) this.setState({price: 1500});
+                else this.setState({price: 2000});
+                break;
+            default:
+                break;
         }
     }
 
@@ -176,48 +221,15 @@ export default class Form extends React.Component {
                 </div>
                 <div className="right only-700">
                     <h4>Orientacyjna cena:</h4>
-                    <h5 className="price red">250 zł</h5>
+                    <h5 className="price red">{this.state.price} zł</h5>
                 </div>
             </div>
             <div className="second-row">
-                <h4>Jaki <span className="bold">plan</span> Cię interesuję?</h4>
+                <h4>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuję?</>}</h4>
                 <div className="plany-grid">
-                    <div className={this.state.standard ? "plan choice" : "plan"} onClick={() => this.handlePlany("standard")}>
-                        <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className={this.state.standard ? "gwiazdka" : "d-none"} />
-                        <button className="button button-opcje">Standard</button>
-                        <h5 className="description">Standardowe opcje na stronie</h5>
-                        <ul className="attributes">
-                            <li>Strona oparta na Wordpressie</li>
-                            <li>Do 5 podstron</li>
-                            <li>Kolejna opcja</li>
-                            <li>I więcej</li>
-                        </ul>
-                        <button className="button button-wybierz">Wybierz plan</button>
-                    </div>
-                    <div className={this.state.profesjonalny ? "plan choice" : "plan"} onClick={() => this.handlePlany("profesjonalny")}>
-                        <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className={this.state.profesjonalny ? "gwiazdka" : "d-none"} />
-                        <button className="button button-opcje">Profesjonalny</button>
-                        <h5 className="description">Profesjonalna witryna</h5>
-                        <ul className="attributes">
-                            <li>Strona oparta na Wordpressie</li>
-                            <li>Do 5 podstron</li>
-                            <li>Kolejna opcja</li>
-                            <li>I więcej</li>
-                        </ul>
-                        <button className="button button-wybierz">Wybierz plan</button>
-                    </div>
-                    <div className={this.state.ultimate ? "plan choice" : "plan"} onClick={() => this.handlePlany("ultimate")}>
-                        <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className={this.state.ultimate ? "gwiazdka" : "d-none"} />
-                        <button className="button button-opcje">Ultimate</button>
-                        <h5 className="description">Coś więcej niż strona...</h5>
-                        <ul className="attributes">
-                            <li>Strona oparta na Wordpressie</li>
-                            <li>Do 5 podstron</li>
-                            <li>Kolejna opcja</li>
-                            <li>I więcej</li>
-                        </ul>
-                        <button className="button button-wybierz">Wybierz plan</button>
-                    </div>
+                    {this.state.aplikacjaWww ? <div className="aplikacjawww-msg">
+                        <textarea name="aplikacjawww-msg" placeholder="Sposób działania aplikacji, wymagane technologie, główne oczekiwania..."/>
+                    </div> : <Cards togglePlany={this.handlePlany} plany={plany} option={this.state.option} />}
                 </div>
             </div>
             <div className="third-row">
