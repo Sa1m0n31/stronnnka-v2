@@ -19,25 +19,24 @@ const DlaczegoMy = () => {
     return (<section className="dlaczego-my">
         <h2>Dlaczego warto nam zaufać?</h2>
         <div className="dlaczego-my-inner">
-            <h3 className="only-1000">
+            <h3 className="only-1500">
                 Sprawdź<br/>
                 <span className="red bold">siedem</span><br/>
                 powodów
             </h3>
             <div className="powod-item powod-item-left">
                 <div className="powod-img">
-                    {/*<img src={require("../../static/img/indywidualne-podejscie.png")} alt="indywidualne-podejscie" />*/}
-                    <Img fluid={data.indywidualnePodejscie.childImageSharp.fluid} alt="indywidualne-podejscie" />
+                    <img src={require("../../static/img/indywidualne-podejscie.svg")} alt="indywidualne-podejscie" />
                 </div>
                 <h4>Indywidualne podejście</h4>
                 <p>Twoja strona nie będzie jednym z oklepanych szablonów niewyróżniających się niczym na tle konkurencji.<br/>Indywidualne podejście do każdego klienta<br/>to nasze pierwsze przykazanie.</p>
             </div>
 
-            <img src={require("../../static/img/strzalki1.png")} alt="strzalki" className="arrow only-1000" />
+            <img src={require("../../static/img/strzalki1.png")} alt="strzalki" className="arrow only-1500" />
 
             <div className="powod-item powod-item-left">
                 <div className="powod-img">
-                    <img src={require("../../static/img/doswiadczenie.png")} alt="doswiadczenie" />
+                    <img src={require("../../static/img/doswiadczenie.svg")} alt="doswiadczenie" />
                 </div>
                 <h4>Doświadczenie</h4>
                 <p>Tworzymy strony nie od dziś. Nasze przeszłe projekty możesz sprawdzić w portfolio.</p>
@@ -45,13 +44,13 @@ const DlaczegoMy = () => {
 
             <div className="powod-item powod-item-left">
                 <div className="powod-img">
-                    <img src={require("../../static/img/pozycjonowanie.png")} alt="pozycjonowanie" />
+                    <img src={require("../../static/img/pozycjonowanie.svg")} alt="pozycjonowanie" />
                 </div>
                 <h4>Pozycjonowanie</h4>
                 <p>Wiemy o SEO więcej niż to, że to jakiś skrót związany z googlowaniem. Wywindujemy Twoją witrynę na szczyt każdej wyszukiwarki.</p>
             </div>
 
-            <img src={require("../../static/img/strzalki2.png")} alt="strzalki" className="arrow2 only-1000" />
+            <img src={require("../../static/img/strzalki2.png")} alt="strzalki" className="arrow2 only-1500" />
 
             <div className="powod-item powod-item-left">
                 <div className="powod-img">
@@ -61,7 +60,7 @@ const DlaczegoMy = () => {
                 <p>Wiemy co zrobić, by Twoja strona była ponadprzeciętnie szybka. I nie zawahamy się tej wiedzy wykorzystać.</p>
             </div>
 
-            <img src={require("../../static/img/strzalki3.png")} alt="strzalki" className="arrow3 only-1000" />
+            <img src={require("../../static/img/strzalki3.png")} alt="strzalki" className="arrow3 only-1500" />
 
             <div className="powod-item powod-item-left">
                 <div className="powod-img">
@@ -71,7 +70,7 @@ const DlaczegoMy = () => {
                 <p>Jeśli jakimś cudem nie wyrobimy się w terminie, gwarantujemy -50% od ceny bazowej za każdą dobę spóźnienia.</p>
             </div>
 
-            <img src={require("../../static/img/strzalki4.png")} alt="strzalki" className="arrow4 only-1000" />
+            <img src={require("../../static/img/strzalki4.png")} alt="strzalki" className="arrow4 only-1500" />
 
             <div className="powod-item powod-item-left">
                 <div className="powod-img">
@@ -81,7 +80,7 @@ const DlaczegoMy = () => {
                 <p>Certyfikat SSL, ochrona przed atakmi XSS i inne nudne rzeczy, o które dzięki nam nie musisz się martwić.</p>
             </div>
 
-            <img src={require("../../static/img/strzalki5.png")} alt="strzalki" className="arrow5 only-1000"  />
+            <img src={require("../../static/img/strzalki5.png")} alt="strzalki" className="arrow5 only-1500"  />
 
             <div className="powod-item powod-item-left">
                 <div className="powod-img">

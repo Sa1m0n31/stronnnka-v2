@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Cards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/plany.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/arrow-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/lighthouse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bootstrap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/doswiadczenie.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/indywidualne-podejscie.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/nodejs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/potwierdzenie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/pozycjonowanie.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/wordpress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DlaczegoMy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DlaczegoMy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lighthouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lighthouse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Technologie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Technologie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/plany.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/plany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/react.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/react.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sass/mobile.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/mobile.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HeraklesSprzatanie" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -90,7 +100,8 @@
       <workItem from="1602069302934" duration="10306000" />
       <workItem from="1602091206484" duration="10298000" />
       <workItem from="1602272579508" duration="7379000" />
-      <workItem from="1602321179698" duration="7110000" />
+      <workItem from="1602321179698" duration="7254000" />
+      <workItem from="1602359812069" duration="12286000" />
     </task>
     <servers />
   </component>
@@ -102,17 +113,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601931419672" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1602094039617">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1602373694180">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602094039617" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1602321179234">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602373694180" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1602359857015">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602321179234" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602322082025">
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602359857015" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602373274009">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602322082025" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602373274009" />
   </component>
 </project>

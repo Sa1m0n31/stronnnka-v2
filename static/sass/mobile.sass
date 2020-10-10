@@ -1,3 +1,9 @@
+// Global
+
+@media(max-width: 700px)
+  .desktop-only
+    display: none
+
 // Landing page
 
 @media(max-width: 1100px)
@@ -11,6 +17,14 @@
     .button-landing
       width: 50vw
 
+  .arrow-up-container
+    width: 50px
+    height: 50px
+
+    img
+      width: 30px
+      height: 30px
+
 // Technologie
 
 @media(max-width: 1000px)
@@ -21,7 +35,24 @@
 @media(max-width: 700px)
   .technologie
     .technologie-grid
-      grid-template-columns: 100%
+      display: flex
+      flex-wrap: wrap
+      width: 200px
+      justify-content: space-between
+      margin-top: 0
+
+      .technologie-item
+        width: 70px
+        height: 70px
+        margin: 10px 0
+
+        .technologie-item-img
+          width: 70px
+          height: 70px
+
+          img
+            width: 40px
+            height: 40px
 
 // Form
 
@@ -150,11 +181,20 @@
       .portfolio-item
         margin: 20px 0
 
+@media(max-width: 500px)
+  .portfolio
+    .portfolio-inner
+      width: 80vw
+      margin-top: 20px
+
+      .portfolio-item
+        width: 80vw
+
 // Dlaczego my
 
 .dlaczego-my
-  @media(max-width: 1000px)
-    .only-1000
+  @media(max-width: 1500px)
+    .only-1500
       display: none
 
     .powod-item
@@ -183,6 +223,17 @@
         grid-column: 2
         grid-row: 2
         font-size: calc(12px + 4 * ((100vw - 300px)/(700)))
+
+  @media(max-width: 1500px)
+    @media(min-width: 1200px)
+      .dlaczego-my-inner
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+
+        .powod-item
+          width: 45%
+
 
 // Landing page
 
@@ -292,3 +343,22 @@
       .column:first-child
         h5
           margin-bottom: 10px
+
+// Modal
+
+@media(max-width: 700px)
+  .ReactModal__Overlay
+    .ReactModal__Content
+      width: 70%
+
+      .exit
+        width: 30px
+        height: 30px
+
+      .modal-inner
+        img
+          width: 80px
+          height: 80px
+
+        .modal-btn
+          min-width: 150px

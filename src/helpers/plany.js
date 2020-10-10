@@ -5,14 +5,14 @@ const plany = {
     ultimate: ["profesjonalny +", "newsletter", "dowolna ilość podstron"]
   },
   stronaFirmowa: {
-      standard: ["landing page", "galeria zdjęć", "sekcja o nas", "oferta"],
+      standard: ["landing page", "galeria zdjęć", "oferta"],
       profesjonalny: ["standard +", "formularz kontaktowy", "opinie"],
       ultimate: ["profesjonalny +", "blog", "newsletter"]
   },
   sklepInternetowy: {
-      standard: ["landing page", "oprogramowanie sklepu", "opinie", "cross-selling"],
+      standard: ["landing page", "oprogramowanie sklepu", "opinie"],
       profesjonalny: ["standard +", "newsletter", "sekcja o nas"],
-      ultimate: ["profesjonalny +", "blog"]
+      ultimate: ["profesjonalny +", "blog", "cross-selling"]
   }
 };
 

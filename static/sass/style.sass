@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100400500700&display=swap')
 
 $red: #BB293D
 $black: #222A2C
@@ -52,7 +52,7 @@ $planHover: #F9D6DB
 *
   margin: 0
   padding: 0
-  font-family: Roboto, 'sans-serif'
+  //font-family: Roboto, 'sans-serif'
 
 body
   overflow-x: hidden !important
@@ -102,6 +102,10 @@ ul
   width: 32px
   height: 32px
 
+@media(min-width: 1200px)
+  .only-1200
+    display: none
+
 @media(max-width: 900px)
   .mobile-only
     display: none
@@ -127,12 +131,14 @@ ul
 
   menu
     width: 70vw
+    max-width: 800px
     height: 100%
     position: absolute !important
     right: 20px
 
     ul
       width: 70vw
+      max-width: 800px
       height: 100%
       justify-content: space-evenly
       align-items: center
@@ -238,6 +244,7 @@ ul
 
   .technologie-grid
     width: 80vw
+    max-width: 1500px
     margin: 50px 0
     display: grid
     grid-template-columns: repeat(3, 30%)
@@ -286,15 +293,16 @@ ul
   h2
     text-align: center
     font-weight: 900
-    font-size: 35px
+    font-size: calc(25px + 25 * ((100vw - 700px)/(1500)))
     margin: 30px 0
 
-  @media(min-width: 1000px)
+  @media(min-width: 1500px)
     .dlaczego-my-inner
       position: relative
       margin: 50px 0
       width: 90vw
       height: 1630px
+      max-width: 1500px
 
       h3
         position: absolute
@@ -405,6 +413,7 @@ ul
   align-items: center
   padding: 50px 0 0 0
   color: #363636
+  position: relative
 
   h2
     font-size: calc(25px + 30 * ((100vw - 500px)/(1500)))
@@ -415,6 +424,7 @@ ul
 
   .first-row
     width: 80%
+    max-width: 1500px
     display: flex
     margin-top: 50px
 
@@ -427,7 +437,7 @@ ul
 
       h4
         font-weight: 400
-        font-size: 25px
+        font-size: calc(20px + 15 * ((100vw - 700px)/(1500)))
         margin: 20px 0
 
       label
@@ -467,6 +477,7 @@ ul
 
   .second-row
     width: 80%
+    max-width: 1500px
 
     h4
       width: 100%
@@ -497,7 +508,7 @@ ul
 
       .plan
         width: 20vw
-        height: 500px
+        max-width: 350px
         box-shadow: 0 0 8px #00000029
         display: flex
         flex-direction: column
@@ -551,7 +562,6 @@ ul
         margin-bottom: 100px
         display: grid
         grid-template-columns: 25vw 25vw
-        grid-template-rows: 70px 200px 30px 80px
 
         input
           position: relative
@@ -595,16 +605,17 @@ ul
 
     .right
       width: 30vw
+      margin-left: -90px
 
       p
         text-align: right
         line-height: 35px
 
-      .errors
-        color: $red
-        font-size: 14px
-        margin-top: 40px
-        line-height: 20px
+    .errors
+      color: $red
+      font-size: 14px
+      margin-top: 40px
+      line-height: 20px
 
 // Portfolio
 
@@ -698,10 +709,15 @@ ul
   color: $blackFont
   position: relative
 
+  .row-container
+    max-width: 1400px
+    +center
+    flex-direction: column
+
   .medal
     position: absolute
     top: 100px
-    right: 50px
+    right: calc(50px + 5vw)
     transform: scale(.8)
 
   h2
@@ -718,6 +734,7 @@ ul
     grid-row-gap: 10px
     align-self: flex-start
     margin: 50px 0 0 5vw
+    max-width: 1000px
 
     .lighthouse-img
       grid-column: 1
@@ -734,8 +751,8 @@ ul
       grid-row: 2
 
   .second-row
-    margin: 50px 50px 50px 0
-    width: 75vw
+    margin: 50px 50px 50px 150px
+    //width: 75vw
     display: grid
     grid-template-columns: 35% 55%
     grid-column-gap: 5%
@@ -810,3 +827,88 @@ ul
     h6
       text-align: center
       margin: 20px 0
+
+// Modal
+
+.ReactModal__Overlay
+  background-color: rgba(0, 0, 0, .6) !important
+  +center
+  color: $blackFont
+  font-family: Roboto, 'sans-serif'
+  z-index: 10
+
+  .ReactModal__Content
+    width: 50%
+    max-width: 500px
+    height: 70vh
+    position: relative !important
+    top: 0 !important
+    left: 0 !important
+    right: 0 !important
+    bottom: 0 !important
+
+    .exit
+      position: absolute
+      top: 15px
+      right: 15px
+      cursor: pointer
+
+    .modal-inner
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+      img
+        width: 160px
+        height: 160px
+        margin: 20px 0
+
+      h2
+        margin-top: 30px
+        font-size: calc(20px + 10 * ((100vw - 700px)/(1500)))
+        text-align: center
+
+      h3
+        margin: 10px 0 30px 0
+        font-size: 16px
+        text-align: center
+        font-weight: 100
+
+      .modal-btn
+        +redBtn
+        height: 50px
+        margin-top: 20px
+        font-size: calc(14px + 15 * ((100vw - 700px)/(1500)))
+
+// Modal animation
+        
+.ReactModal__Overlay
+  opacity: 0
+  transform: translateX(-100px)
+  transition: all 500ms ease-in-out
+  background: rgba(0,0,0,.75) !important
+  display: flex
+  justify-content: center
+  align-items: center
+
+.ReactModal__Overlay--after-open
+  opacity: 1
+  transform: translateX(0px)
+
+.ReactModal__Overlay--before-close
+  opacity: 0
+  transform: translateX(-100px)
+
+// Recaptcha
+
+.grecaptcha-badge
+  width: 70px !important
+  overflow: hidden !important
+  transition: all 0.3s ease !important
+  left: 4px !important
+
+.grecaptcha-badge:hover
+  width: 256px !important
+

@@ -4,6 +4,9 @@ import Cards from "./Cards";
 import plany from "../helpers/plany";
 
 import { gsap } from 'gsap/all';
+import Modal from 'react-modal';
+
+import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3';
 
 export default class Form extends React.Component {
     constructor(props) {
@@ -13,6 +16,7 @@ export default class Form extends React.Component {
             stronaFirmowa: false,
             sklepInternetowy: false,
             aplikacjaWww: false,
+            aplikacjaWwwMsg: "",
             option: "strona portfolio",
             standard: false,
             profesjonalny: false,
@@ -21,13 +25,30 @@ export default class Form extends React.Component {
             phoneNumber: "",
             msg: "",
             formError: "",
-            price: 400
+            price: 400,
+            open: false,
+            isVerified: false,
+            status: ""
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePlany = this.handlePlany.bind(this);
         this.handleAnimation = this.handleAnimation.bind(this);
         this.handlePrice = this.handlePrice.bind(this);
+        this.verifyCallback = this.verifyCallback.bind(this);
+    }
+
+    componentDidMount() {
+        Modal.setAppElement('.form-section');
+        loadReCaptcha("6Lcu99UZAAAAAJgD8Ilahd7aDmha38UQYqu5mN59");
+    }
+
+    verifyCallback(res) {
+        if(res) {
+            this.setState({
+                isVerified: true
+            });
+        }
     }
 
     handleChange(e, name) {
@@ -93,7 +114,6 @@ export default class Form extends React.Component {
     }
 
     handleSubmit(e) {
-        console.log("SUBMIT!");
         e.preventDefault();
 
         /* Both empty verification */
@@ -124,7 +144,7 @@ export default class Form extends React.Component {
         }
 
         /* Phone number verification */
-        if((isNaN(this.state.phoneNumber))||(this.state.phoneNumber.length > 12)||(this.state.phoneNumber.length < 9)) {
+        if(((isNaN(this.state.phoneNumber))||(this.state.phoneNumber.length > 12)||(this.state.phoneNumber.length < 9))&&(this.state.phoneNumber.length !== 0)) {
             this.setState({
                 formError: "Niepoprawny numer telefonu"
             });
@@ -136,7 +156,48 @@ export default class Form extends React.Component {
             });
         }
 
-        console.log(this.state);
+        /* Submit form */
+        if((this.state.formError.length === 0)&&(this.state.isVerified)) {
+            /* Collect data */
+            const data = {
+              email: this.state.email,
+              numerTelefonu: this.state.phoneNumber,
+              wiadomosc: this.state.msg,
+              produkt: this.state.option,
+              standard: this.state.standard,
+              profesjonalny: this.state.profesjonalny,
+              ultimate: this.state.ultimate,
+              aplikacjaWwwOpis: this.state.aplikacjaWwwMsg
+            };
+
+            const form = e.target;
+            const xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    form.reset();
+                    this.setState({ status: "SUCCESS" });
+                } else {
+                    this.setState({ status: "ERROR" });
+                }
+            };
+            xhr.send(JSON.stringify(data));
+
+
+
+            /* Reset state */
+            this.setState({
+                open: true,
+                email: "",
+                phoneNumber: "",
+                msg: ""
+            });
+        }
+        else if(!this.state.isVerified) {
+            console.log("Not verified");
+        }
     }
 
     handlePlany(plan) {
@@ -188,6 +249,16 @@ export default class Form extends React.Component {
 
     render() {
         return (<section className="form-section">
+            <Modal isOpen={this.state.open} closeTimeoutMS={500} onRequestClose={() => { this.setState({open: false}); }}>
+                <img src={require("../../static/img/x.png")} alt="exit" className="exit" onClick={() => { this.setState({open: false}); }}/>
+                <div className="modal-inner">
+                    <img src={require("../../static/img/potwierdzenie.png")} alt="formularz-wyslany" />
+                    <h2>Twój formularz został wysłany!</h2>
+                    <h3>Skontaktujemy się z Tobą w ciągu 24 h</h3>
+                    <button className="button modal-btn" onClick={() => { this.setState({open: false}); }}>Dzięki!</button>
+                </div>
+            </Modal>
+
             <h2>Ubijemy ten interes?</h2>
             <h3>Darmowa wycena w 24h</h3>
             <div className="first-row">
@@ -228,19 +299,30 @@ export default class Form extends React.Component {
                 <h4>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuję?</>}</h4>
                 <div className="plany-grid">
                     {this.state.aplikacjaWww ? <div className="aplikacjawww-msg">
-                        <textarea name="aplikacjawww-msg" placeholder="Sposób działania aplikacji, wymagane technologie, główne oczekiwania..."/>
+                        <textarea name="aplikacjaWwwMsg" placeholder="Sposób działania aplikacji, wymagane technologie, główne oczekiwania..." value={this.state.aplikacjaWwwMsg} onChange={e => this.handleChange(e)}/>
                     </div> : <Cards togglePlany={this.handlePlany} plany={plany} option={this.state.option} />}
                 </div>
             </div>
             <div className="third-row">
                 <div className="left">
                     <h3>Zostaw kontakt do siebie, wypełnij <span className="bold">formularz</span> poniżej:</h3>
-                    <form method="POST" action="#" onSubmit={e => this.handleSubmit(e)}>
+                    <form method="POST" action="https://formspree.io/f/moqpjopv" onSubmit={e => this.handleSubmit(e)}>
                         <input type="text" name="email" placeholder="Adres email" value={this.state.email} onChange={e => this.handleChange(e)} />
                         <input type="text" name="phoneNumber" placeholder="Numer telefonu" value={this.state.phoneNumber} onChange={e => this.handleChange(e)} />
-                        <textarea name="msg" className="msg" placeholder="Pytania, sugestie, uwagi (opcjonalnie)" />
+                        <textarea name="msg" className="msg" placeholder="Pytania, sugestie, uwagi (opcjonalnie)" value={this.state.msg} onChange={e => this.handleChange(e)}/>
                         <p className="disclaimer">Wypełnij preferowaną formę kontaktu - mail lub numer telefonu.</p>
-                        <button type="submit" onClick={e => this.handleSubmit(e)} className="button button-submit">Wyślij</button>
+                        <div className={this.state.formError !== "" ? "errors only-1200" : "d-none"}>
+                            Hej, mamy problem z wysłaniem Twojego formularza.<br/>
+                            * {this.state.formError}
+                        </div>
+                        <div className="recaptcha">
+                            <ReCaptcha
+                                sitekey="6Lcu99UZAAAAAJgD8Ilahd7aDmha38UQYqu5mN59"
+                                render="implicit"
+                                verifyCallback={this.verifyCallback}
+                            />
+                        </div>
+                        <button type="submit" className="button button-submit">Wyślij</button>
                     </form>
                 </div>
                 <div className="right">
