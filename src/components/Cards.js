@@ -9,7 +9,7 @@ const Cards = ({option, plany, togglePlany}) => {
     else strona = sklepInternetowy;
 
     let [standard, setStandard] = useState(false);
-    let [profesjonalny, setProfesjonalny] = useState(false);
+    let [profesjonalny, setProfesjonalny] = useState(true);
     let [ultimate, setUltimate] = useState(false);
 
     const handlePlany = (arg) => {
@@ -38,7 +38,6 @@ const Cards = ({option, plany, togglePlany}) => {
     return (<>
         {/* STANDARD */}
         <div className={standard ? "plan choice" : "plan"} onClick={() => handlePlany("standard")}>
-            <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className={standard ? "gwiazdka" : "d-none"} />
             <button className="button button-opcje">Standard</button>
             <h5 className="description">Standardowe opcje na stronie</h5>
             <ul className="attributes">
@@ -49,20 +48,22 @@ const Cards = ({option, plany, togglePlany}) => {
             <button className="button button-wybierz">Wybierz plan</button>
         </div>
         {/* PROFESJONALNY */}
-        <div className={profesjonalny ? "plan choice" : "plan"} onClick={() => handlePlany("profesjonalny")}>
-            <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className={profesjonalny ? "gwiazdka" : "d-none"} />
-            <button className="button button-opcje">Profesjonalny</button>
-            <h5 className="description">Profesjonalna witryna</h5>
-            <ul className="attributes">
-                {strona.profesjonalny.map((item, index) => {
-                    return (<li key={index}>{item}</li>);
-                })}
-            </ul>
-            <button className="button button-wybierz">Wybierz plan</button>
+        <h5 className="zalecany-plan desktop-only">Wybór klientów</h5>
+        <div className="best-plan">
+            <div className={profesjonalny ? "plan choice" : "plan"} onClick={() => handlePlany("profesjonalny")}>
+                <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className="gwiazdka"/>
+                <button className="button button-opcje">Profesjonalny</button>
+                <h5 className="description">Profesjonalna witryna</h5>
+                <ul className="attributes">
+                    {strona.profesjonalny.map((item, index) => {
+                        return (<li key={index}>{item}</li>);
+                    })}
+                </ul>
+                <button className="button button-wybierz">Wybierz plan</button>
+            </div>
         </div>
         {/* ULTIMATE */}
         <div className={ultimate ? "plan choice" : "plan"} onClick={() => handlePlany("ultimate")}>
-            <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className={ultimate ? "gwiazdka" : "d-none"} />
             <button className="button button-opcje">Ultimate</button>
             <h5 className="description">Coś więcej niż strona...</h5>
             <ul className="attributes">

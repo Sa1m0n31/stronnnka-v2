@@ -1,10 +1,24 @@
 import React from "react";
 
+import { graphql, useStaticQuery } from "gatsby";
+import Img from 'gatsby-image';
+
 const Lighthouse = () => {
+    const data = useStaticQuery(graphql`
+        query Pomiary {
+    pomiary: file(relativePath: { eq: "lighthouse.png" }) {
+        childImageSharp {
+            fluid(maxWidth: 756, maxHeight: 246) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }}
+    `);
+
     return (<section className="lighthouse">
         <h2>Maksymalna wydajność stron</h2>
         <h3>Doskonały performance, pełna responsywność i optymalizacja pod SEO</h3>
-        <img src={require("../../static/img/medal.png")} alt="medal" className="medal mobile-only" />
+        <img src={require("../../static/img/medal.png")} alt="medal" className="medal only-1250" />
         <div className="row-container">
             <div className="first-row">
                 <img src={require("../../static/img/lighthouse-logo.png")} alt="lighthouse" className="lighthouse-img" />
@@ -12,7 +26,7 @@ const Lighthouse = () => {
                 <p>Do pomiaru poziomów wydajności witryny może posłużyć narzędzie Lighthouse. Prosty w obsłudze dodatek pokaże nam jakie wartości przyjmuje dana strona, np. w zakresie pozycjonowania SEO lub wydajności strony.</p>
             </div>
             <div className="second-row">
-                <img src={require("../../static/img/lighthouse.png")} alt="pomiary" className="pomiary" />
+                <Img fluid={data.pomiary.childImageSharp.fluid} alt="pomiary" />
                 <h4>Przykładowe pomiary dla jednej z naszych stron</h4>
                 <p>Jak widać na załączonym obrazku, pomiary na jednym ze zrealizowanych przez nas projektów osiągają prawie maksymalną wartość przy każdym elemencie.</p>
             </div>

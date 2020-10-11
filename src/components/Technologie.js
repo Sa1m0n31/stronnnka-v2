@@ -10,7 +10,7 @@ const Technologie = () => {
                 </div>
                 <div className="technologie-text-container desktop-only">
                     <h3>React</h3>
-                    <p>Javascriptowa biblioteka do tworzenia interfejsów graficznych. W oparciu o nią swoje witryny zbudowali m.in. Netflix, PayPal czy Walmart.</p>
+                    <p>Javascriptowa biblioteka do tworzenia interfejsów graficznych. W oparciu o nią swoje witryny zbudowali m.in. <span className="half-bold">Netflix, PayPal czy Walmart</span>.</p>
                 </div>
             </div>
 
@@ -20,7 +20,7 @@ const Technologie = () => {
                 </div>
                 <div className="technologie-text-container desktop-only">
                     <h3>Adobe XD</h3>
-                    <p>Narzędzie do tworzenia interaktywnych prototypów stron internetowych. To tu pracujemy nad UX i szatą graficzną Twojej witryny.</p>
+                    <p>Narzędzie do tworzenia interaktywnych prototypów stron internetowych. To tu pracujemy nad UX i <span className="half-bold">szatą graficzną Twojej witryny</span>.</p>
                 </div>
             </div>
 
@@ -30,7 +30,7 @@ const Technologie = () => {
                 </div>
                 <div className="technologie-text-container desktop-only">
                     <h3>Gatsby</h3>
-                    <p>Generator stron statycznych o ogromnych możliwościach. Strony oparte na Gatsbym wyróżniają się większym bezpieczeństwem i przede wszystkim ponadprzeciętną szybkością.</p>
+                    <p>Generator stron statycznych o ogromnych możliwościach. Strony oparte na Gatsbym wyróżniają się <span className="half-bold">większym bezpieczeństwem</span> i przede wszystkim <span className="half-bold">ponadprzeciętną szybkością</span>.</p>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@ const Technologie = () => {
                 </div>
                 <div className="technologie-text-container desktop-only">
                     <h3>Bootstrap</h3>
-                    <p>Tworzona przez programistów Twittera biblioteka CSS. To m.in. dzięki niej Twoja strona będzie perfekcyjnie dopasowywać się do każdej rozdzielczości ekranu.</p>
+                    <p>Tworzona przez programistów Twittera biblioteka CSS. To m.in. dzięki niej Twoja strona będzie perfekcyjnie dopasowywać się do <span className="half-bold">każdej rozdzielczości ekranu</span>.</p>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ const Technologie = () => {
                 </div>
                 <div className="technologie-text-container desktop-only">
                     <h3>NodeJS</h3>
-                    <p>Powstałe w 2009 roku środowisko uruchomieniowe aplikacji napisanych w Javascript. Od tego czasu zdążyli mu zaufać tacy giganci jak Microsoft, Yahoo! czy Uber.</p>
+                    <p>Powstałe w 2009 roku środowisko uruchomieniowe aplikacji napisanych w Javascript. Od tego czasu zdążyli mu zaufać tacy giganci jak <span className="half-bold">Microsoft, Yahoo! czy Uber</span>.</p>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@ const Technologie = () => {
                 </div>
                 <div className="technologie-text-container desktop-only">
                     <h3>Wordpress</h3>
-                    <p>Najprostszy w obsłudzę CMS (Content Management System), dzięki któremu nie będziesz miał(a) problemów z obsługą swojej witryny (a nawet jeśli, to i tak Ci pomożemy).</p>
+                    <p>Najprostszy w obsłudzę CMS (Content Management System), dzięki któremu <span className="half-bold">nie będziesz miał(a) problemów z obsługą swojej witryny</span> (a nawet jeśli, to i tak Ci pomożemy).</p>
                 </div>
             </div>
         </div>

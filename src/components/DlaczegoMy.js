@@ -29,7 +29,7 @@ const DlaczegoMy = () => {
                     <img src={require("../../static/img/indywidualne-podejscie.svg")} alt="indywidualne-podejscie" />
                 </div>
                 <h4>Indywidualne podejście</h4>
-                <p>Twoja strona nie będzie jednym z oklepanych szablonów niewyróżniających się niczym na tle konkurencji.<br/>Indywidualne podejście do każdego klienta<br/>to nasze pierwsze przykazanie.</p>
+                <p>Twoja strona nie będzie jednym z oklepanych szablonów niewyróżniających się niczym na tle konkurencji. Indywidualne podejście do każdego klienta to nasze pierwsze przykazanie.</p>
             </div>
 
             <img src={require("../../static/img/strzalki1.png")} alt="strzalki" className="arrow only-1500" />
