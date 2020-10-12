@@ -9,6 +9,11 @@ import Menu from "./Menu";
 const LandingPage = () => {
     useEffect(() => {
         if(typeof window !== 'undefined') {
+            const FF = (window.mozInnerScreenX == null);
+            if(FF) {
+                setFirefox(true);
+            }
+
             window.addEventListener("scroll", () => {
                 if(window.pageYOffset > 100) {
                     gsap.to(up.current, {opacity: 1, duration: .5});
@@ -27,6 +32,7 @@ const LandingPage = () => {
     }, []);
 
     let [mobile, setMobile] = useState(false);
+    let [firefox, setFirefox] = useState(false);
 
     const data = useStaticQuery(graphql`
         query Slider {
@@ -47,16 +53,7 @@ const LandingPage = () => {
     }
     `);
 
-    const btn = useRef(null);
     const up = useRef(null);
-
-    const buttonAnimation = () => {
-      if(!mobile) gsap.to(btn.current, { transform: "translate(0)", width: "100%", duration: 1, ease: Power4.easeOut});
-    };
-
-    const buttonLeave = () => {
-      if(!mobile) gsap.to(btn.current, { transform: "translate(100%)", duration: 1, ease: Power4.easeOut });
-    };
 
     const goTo = (arg) => {
         if((typeof document !== 'undefined')&&(typeof window !== 'undefined')) {
@@ -80,9 +77,9 @@ const LandingPage = () => {
             <div className="landing-inner">
                 <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
                 <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług.</h2>
-                <button className="button button-landing no-select" onMouseOver={buttonAnimation} onMouseLeave={buttonLeave} onClick={() => goTo(".form-section")}>
+                <button className="button button-landing no-select" onClick={() => goTo(".form-section")}>
                     {mobile ? "Zostaw do siebie kontakt" : "Skontaktuj się z nami"}
-                    <div ref={btn} className="hover only-700">Wypełnij formularz</div>
+                    <div className="hover only-700">Wypełnij formularz</div>
                 </button>
             </div>
             <div className="social-media">

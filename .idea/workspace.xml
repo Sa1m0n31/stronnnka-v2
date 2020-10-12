@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lighthouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lighthouse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/mobile.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/mobile.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
       <workItem from="1602417032614" duration="6493000" />
       <workItem from="1602490843279" duration="4031000" />
       <workItem from="1602496734266" duration="4000" />
-      <workItem from="1602524821425" duration="3496000" />
+      <workItem from="1602524821425" duration="7832000" />
     </task>
     <servers />
   </component>

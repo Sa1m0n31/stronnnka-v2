@@ -236,6 +236,7 @@ ul
     height: 80px
     justify-self: center
     +redBtn
+    position: relative
 
     @media(min-width: 700px)
        .hover
@@ -248,7 +249,13 @@ ul
         color: $blackFont
         border-radius: 80px
         +center
+        animation: buttonoff .3s ease-in-out
+        width: 100%
 
+  .button-landing:hover
+    .hover
+      animation: button .3s ease-in-out
+      animation-fill-mode: forwards
 
   .social-media
     position: absolute
@@ -1003,3 +1010,18 @@ ul
 .grecaptcha-badge:hover
   width: 256px !important
 
+// Animations
+
+@keyframes button
+  from
+    right: 0
+  to
+    right: 100%
+
+@keyframes buttonoff
+  from
+    right: 100%
+    width: 100%
+  to
+    right: 0
+    width: 100%
