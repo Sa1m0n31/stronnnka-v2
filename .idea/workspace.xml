@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/img/gwiazdy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/doswiadczenie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/doswiadczenie.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/doswiadczenie.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/indywidualne-podejscie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/pozycjonowanie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/mobile.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/mobile.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +85,7 @@
       <workItem from="1602321179698" duration="7254000" />
       <workItem from="1602359812069" duration="14070000" />
       <workItem from="1602417032614" duration="6493000" />
-      <workItem from="1602490843279" duration="2907000" />
+      <workItem from="1602490843279" duration="3579000" />
     </task>
     <servers />
   </component>

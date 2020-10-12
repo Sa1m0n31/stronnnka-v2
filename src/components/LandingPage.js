@@ -72,7 +72,7 @@ const LandingPage = () => {
 
     return (<main className="landing-page">
         <div ref={up} className="arrow-up-container" onClick={() => goTo("top")}>
-            <img src={require("../../static/img/arrow-up.png")} alt="do-gory" className="arrow-up"/>
+            <img src={require("../../static/img/arrow-up.png")} alt="do-gory" className="arrow-up no-select"/>
         </div>
         {mobile ? <Img fluid={data.sliderMobile.childImageSharp.fluid} alt="Slider" /> : <Img fluid={data.slider.childImageSharp.fluid} alt="Slider" imgStyle={{objectPosition: "10% 10%"}}/>}
         <Menu />
@@ -80,7 +80,7 @@ const LandingPage = () => {
             <div className="landing-inner">
                 <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
                 <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług.</h2>
-                <button className="button button-landing" onMouseOver={buttonAnimation} onMouseLeave={buttonLeave} onClick={() => goTo(".form-section")}>
+                <button className="button button-landing no-select" onMouseOver={buttonAnimation} onMouseLeave={buttonLeave} onClick={() => goTo(".form-section")}>
                     {mobile ? "Zostaw do siebie kontakt" : "Skontaktuj się z nami"}
                     <div ref={btn} className="hover only-700">Wypełnij formularz</div>
                 </button>

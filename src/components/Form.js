@@ -265,24 +265,24 @@ export default class Form extends React.Component {
                 <div className="left">
                     <h4>Zaznacz, czego potrzebujesz:</h4>
                     <div className="options-strony">
-                        <label onClick={(e) => this.handleChange(e, "stronaPortfolio")}>
+                        <label className="no-select" onClick={(e) => this.handleChange(e, "stronaPortfolio")}>
                             <button className={!this.state.stronaPortfolio ? "button button-option" : "button button-option no-border"} id="strona-portfolio" >
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.stronaPortfolio ? "" : "d-none"} />
                             </button>Strona portfolio
                         </label>
-                        <label onClick={(e) => this.handleChange(e, "stronaFirmowa")}>
+                        <label className="no-select" onClick={(e) => this.handleChange(e, "stronaFirmowa")}>
                             <button className={!this.state.stronaFirmowa ? "button button-option" : "button button-option no-border"} id="strona-firmowa">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.stronaFirmowa ? "" : "d-none"} />
                             </button>
                                 Strona firmowa
                         </label>
-                        <label onClick={(e) => this.handleChange(e, "sklepInternetowy")}>
+                        <label className="no-select" onClick={(e) => this.handleChange(e, "sklepInternetowy")}>
                             <button className={!this.state.sklepInternetowy ? "button button-option" : "button button-option no-border"} id="sklep-internetowy">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.sklepInternetowy ? "" : "d-none"} />
                             </button>
                                 Sklep internetowy
                         </label>
-                        <label onClick={(e) => this.handleChange(e, "aplikacjaWww")}>
+                        <label className="no-select" onClick={(e) => this.handleChange(e, "aplikacjaWww")}>
                             <button className={!this.state.aplikacjaWww ? "button button-option" : "button button-option no-border"} id="aplikacja-www">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.aplikacjaWww ? "" : "d-none"} />
                             </button>
