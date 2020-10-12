@@ -54,6 +54,11 @@ $planHover: #F9D6DB
   padding: 0
   font-family: Roboto, 'sans-serif'
 
+*:focus
+  background-image: none
+  outline: 0
+  box-shadow: none
+
 body
   overflow-x: hidden !important
 
@@ -86,7 +91,6 @@ ul
 
 .choice
   background-color: rgba(249, 214, 219, .5) !important
-  box-shadow: none !important
 
 .arrow-up-container
   position: fixed
@@ -195,7 +199,6 @@ ul
       align-items: center
       margin-top: -100px
 
-
   h1, h2, button, menu
     position: relative
     z-index: 2
@@ -222,16 +225,17 @@ ul
     font-family: "Roboto Thin", sans-serif
     +redBtn
 
-    .hover
-      position: absolute
-      top: 0
-      right: 0
-      transform: translateX(100%)
-      height: 100%
-      background-color: $btnHover
-      color: $blackFont
-      border-radius: 80px
-      +center
+    @media(min-width: 700px)
+       .hover
+        position: absolute
+        top: 0
+        right: 0
+        transform: translateX(100%)
+        height: 100%
+        background-color: $btnHover
+        color: $blackFont
+        border-radius: 80px
+        +center
 
 
   .social-media
@@ -547,15 +551,14 @@ ul
           outline: none !important
 
       .plan:hover
-        -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.5)
-        -moz-box-shadow: 0 0 5px 5px rgba(0,0,0,0.5)
-        box-shadow: 0 0 5px 5px rgba(0,0,0,0.5)
         background-color: rgba(249, 214, 219, .3)
 
       .plan
+        -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.5)
+        -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.5)
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.5)
         width: 20vw
         max-width: 350px
-        box-shadow: 0 0 8px #00000029
         display: flex
         flex-direction: column
         align-items: center

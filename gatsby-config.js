@@ -17,5 +17,6 @@ module.exports = {
         path: path.join(__dirname, 'static', `img`)
       }
     },
+   'gatsby-plugin-react-helmet',
   'gatsby-plugin-sass']
 };

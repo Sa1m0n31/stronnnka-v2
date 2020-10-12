@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image';
 
@@ -17,8 +17,16 @@ const LandingPage = () => {
                     gsap.fromTo(up.current, {opacity: 1}, {opacity: 0, duration: .5});
                 }
             });
+
+            if(window.innerWidth < 700) setMobile(true);
+            window.addEventListener("resize", () => {
+               if(window.innerWidth < 700) setMobile(true);
+               else setMobile(false);
+            });
         }
     }, []);
+
+    let [mobile, setMobile] = useState(false);
 
     const data = useStaticQuery(graphql`
         query Slider {
@@ -28,18 +36,26 @@ const LandingPage = () => {
                 ...GatsbyImageSharpFluid
             }
         }
-    }}
+    }
+    sliderMobile: file(relativePath: { eq: "gwiazdy.png" }) {
+        childImageSharp {
+            fluid(maxWidth: 717, maxHeight: 812) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    }
     `);
 
     const btn = useRef(null);
     const up = useRef(null);
 
     const buttonAnimation = () => {
-      gsap.to(btn.current, { transform: "translate(0)", width: "100%", duration: 1, ease: Power4.easeOut});
+      if(!mobile) gsap.to(btn.current, { transform: "translate(0)", width: "100%", duration: 1, ease: Power4.easeOut});
     };
 
     const buttonLeave = () => {
-      gsap.to(btn.current, { transform: "translate(100%)", duration: 1, ease: Power4.easeOut });
+      if(!mobile) gsap.to(btn.current, { transform: "translate(100%)", duration: 1, ease: Power4.easeOut });
     };
 
     const goTo = (arg) => {
@@ -58,15 +74,15 @@ const LandingPage = () => {
         <div ref={up} className="arrow-up-container" onClick={() => goTo("top")}>
             <img src={require("../../static/img/arrow-up.png")} alt="do-gory" className="arrow-up"/>
         </div>
-        <Img fluid={data.slider.childImageSharp.fluid} alt="Slider" imgStyle={{objectPosition: "10% 10%"}}/>
+        {mobile ? <Img fluid={data.sliderMobile.childImageSharp.fluid} alt="Slider" /> : <Img fluid={data.slider.childImageSharp.fluid} alt="Slider" imgStyle={{objectPosition: "10% 10%"}}/>}
         <Menu />
         <div className="landing-container">
             <div className="landing-inner">
                 <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
                 <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług.</h2>
                 <button className="button button-landing" onMouseOver={buttonAnimation} onMouseLeave={buttonLeave} onClick={() => goTo(".form-section")}>
-                    Skontaktuj się z nami
-                    <div ref={btn} className="hover">Wypełnij formularz</div>
+                    {mobile ? "Zostaw do siebie kontakt" : "Skontaktuj się z nami"}
+                    <div ref={btn} className="hover only-700">Wypełnij formularz</div>
                 </button>
             </div>
             <div className="social-media">
