@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../three-js" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -89,7 +87,8 @@
       <workItem from="1602417032614" duration="6493000" />
       <workItem from="1602490843279" duration="4031000" />
       <workItem from="1602496734266" duration="4000" />
-      <workItem from="1602524821425" duration="7832000" />
+      <workItem from="1602524821425" duration="8457000" />
+      <workItem from="1602613772961" duration="42000" />
     </task>
     <servers />
   </component>
@@ -101,14 +100,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601931419672" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1602494893632">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1602613812726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602494893632" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1602491041359">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602613812726" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1602613805207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602491041359" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602613805207" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602421726637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
