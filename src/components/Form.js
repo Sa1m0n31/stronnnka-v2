@@ -290,10 +290,10 @@ export default class Form extends React.Component {
                         </label>
                     </div>
                 </div>
-                <div className="right only-700">
+                {this.state.aplikacjaWww ? "" : (<div className="right only-700">
                     <h4>Orientacyjna cena:</h4>
                     <h5 className="price red">{this.state.price} zł</h5>
-                </div>
+                </div>)}
             </div>
             <div className="second-row">
                 <h4>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuję?</>}</h4>

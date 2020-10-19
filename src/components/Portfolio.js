@@ -27,7 +27,7 @@ const Portfolio = () => {
             <div className="portfolio-item">
                 <img src={require("../../static/img/portfolio1.png")} alt="portfolio-1" className="portfolio-img" />
                 <div ref={overlay} className="portfolio-overlay" onMouseOver={() => handleHover(overlay)} onMouseOut={() => handleLeave(overlay)}>
-                    <h3>Burskisprzatanie.pl</h3>
+                    <h3>burskisprzatanie.pl</h3>
                     <h4>Strona firmy sprzątającej Burski Sprzątanie</h4>
                     <a href="https://burskisprzatanie.pl" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/link.png")} alt="link" />
@@ -38,9 +38,9 @@ const Portfolio = () => {
             <div className="portfolio-item" onMouseOver={() => handleHover(overlay1)} onMouseOut={() => handleLeave(overlay1)}>
                 <img src={require("../../static/img/portfolio1.png")} alt="portfolio-1" className="portfolio-img"/>
                 <div ref={overlay1} className="portfolio-overlay">
-                    <h3>Burskisprzatanie.pl</h3>
-                    <h4>Strona firmy sprzątającej Burski Sprzątanie</h4>
-                    <a href="https://burskisprzatanie.pl" rel="noreferrer" target="_blank">
+                    <h3>kacperadamski.pl</h3>
+                    <h4>Strona portfolio dla specjalisty ds. marketingu, Pana Kacpra Adamskiego</h4>
+                    <a href="https://kacperadamski.pl" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/link.png")} alt="link" />
                     </a>
                 </div>

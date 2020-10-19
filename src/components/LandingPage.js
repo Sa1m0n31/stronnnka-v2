@@ -76,7 +76,7 @@ const LandingPage = () => {
         <div className="landing-container">
             <div className="landing-inner">
                 <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
-                <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług.</h2>
+                <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. {mobile ? "" : "Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług."}</h2>
                 <button className="button button-landing no-select" onClick={() => goTo(".form-section")}>
                     {mobile ? "Zostaw do siebie kontakt" : "Skontaktuj się z nami"}
                     <div className="hover only-700">Wypełnij formularz</div>

@@ -10,11 +10,11 @@ const Menu = () => {
 
     return (<header className="top-menu">
         <div className="logo">
-            <h5>Nazwa</h5>
+            <img src={require("../../static/img/logo.png")} alt="Skylo - tanie i profesjonalne strony internetowe" />
         </div>
         <menu>
             <ul>
-                <li>Home</li>
+                <li>Strona główna</li>
                 <li onClick={() => goTo(".portfolio")}>Portfolio</li>
                 <li onClick={() => goTo(".dlaczego-my")}>O nas</li>
                 <li onClick={() => goTo(".form-section")}>Kontakt</li>

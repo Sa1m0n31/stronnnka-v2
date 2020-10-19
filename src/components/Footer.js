@@ -29,14 +29,14 @@ const Footer = () => {
             <div className="column">
                 <h5>Kontakt z nami</h5>
                 <ul>
-                    <li>kontakt@stronnnka.pl</li>
+                    <li>kontakt@skylo.pl</li>
                     <li>697 099 402</li>
                     <li>600 179 174</li>
                 </ul>
             </div>
         </div>
         <div className="footer-bottom">
-            <h6>Copyright &copy; stronnnka.pl 2020</h6>
+            <h6>Copyright &copy; Skylo.pl 2020</h6>
         </div>
     </footer>);
 };
