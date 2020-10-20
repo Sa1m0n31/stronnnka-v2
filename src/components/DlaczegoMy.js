@@ -1,28 +1,14 @@
-import React, { useEffect, useState } from "react";
-
-import { graphql, useStaticQuery } from "gatsby";
-import Img from 'gatsby-image';
+import React from "react";
 
 const DlaczegoMy = () => {
 
-    const data = useStaticQuery(graphql`
-           query Powody {
-    indywidualnePodejscie: file(relativePath: { eq: "indywidualne-podejscie.png" }) {
-        childImageSharp {
-            fluid(maxWidth: 501, maxHeight: 302) {
-                ...GatsbyImageSharpFluid
-            }
-        }
-    }}
-    `);
-
     return (<section className="dlaczego-my">
-        <h2>Dlaczego warto nam zaufać?</h2>
+        <h2>Z nami zyskujesz</h2>
         <div className="dlaczego-my-inner">
             <h3 className="only-1500">
-                Sprawdź<br/>
+                Twoje<br/>
                 <span className="red bold">siedem</span><br/>
-                powodów
+                korzyści
             </h3>
             <div className="powod-item powod-item-left">
                 <div className="powod-img">

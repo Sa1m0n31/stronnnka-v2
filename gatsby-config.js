@@ -17,6 +17,12 @@ module.exports = {
         path: path.join(__dirname, 'static', `img`)
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-180770046-1'
+      }
+    },
    'gatsby-plugin-react-helmet',
   'gatsby-plugin-sass']
 };

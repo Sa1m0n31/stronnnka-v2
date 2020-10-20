@@ -1,8 +1,8 @@
 const plany = {
   stronaPortfolio: {
     standard: ["landing page", "galeria zdjęć", "sekcja o mnie"],
-    profesjonalny: ["standard +", "blog", "formularz kontaktowy"],
-    ultimate: ["profesjonalny +", "newsletter", "dowolna ilość podstron"]
+    profesjonalny: ["standard +", "dowolna ilość podstron", "formularz kontaktowy"],
+    ultimate: ["profesjonalny +", "blog", "newsletter"]
   },
   stronaFirmowa: {
       standard: ["landing page", "galeria zdjęć", "oferta"],

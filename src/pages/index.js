@@ -15,7 +15,7 @@ import '../../static/sass/mobile.sass';
 
 export default function Home() {
   return (<div className="app">
-      <Helmet>
+      <Helmet htmlAttributes={{lang: "pl"}}>
           <meta charSet="utf-8" />
           <title>Stronnnka</title>
           <meta name="description" content="Tanie i profesjonalne projekty stron internetowych"/>

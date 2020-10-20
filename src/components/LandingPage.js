@@ -9,11 +9,6 @@ import Menu from "./Menu";
 const LandingPage = () => {
     useEffect(() => {
         if(typeof window !== 'undefined') {
-            const FF = (window.mozInnerScreenX == null);
-            if(FF) {
-                setFirefox(true);
-            }
-
             window.addEventListener("scroll", () => {
                 if(window.pageYOffset > 100) {
                     gsap.to(up.current, {opacity: 1, duration: .5});
@@ -32,7 +27,6 @@ const LandingPage = () => {
     }, []);
 
     let [mobile, setMobile] = useState(false);
-    let [firefox, setFirefox] = useState(false);
 
     const data = useStaticQuery(graphql`
         query Slider {
@@ -83,9 +77,15 @@ const LandingPage = () => {
                 </button>
             </div>
             <div className="social-media">
-                <img src={require("../../static/img/facebook.png")} alt="facebook" />
-                <img src={require("../../static/img/twitter.png")} alt="twitter" />
-                <img src={require("../../static/img/instagram.png")} alt="instagram" />
+                <a target="_blank" rel="noreferrer" href="https://facebook.com">
+                    <img src={require("../../static/img/facebook.png")} alt="facebook" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://facebook.com">
+                    <img src={require("../../static/img/twitter.png")} alt="twitter" />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://facebook.com">
+                    <img src={require("../../static/img/instagram.png")} alt="instagram" />
+                </a>
             </div>
         </div>
     </main>)

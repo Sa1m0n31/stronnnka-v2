@@ -21,14 +21,16 @@ const Lighthouse = () => {
         <div className="row-container">
             <div className="first-row">
                 <img src={require("../../static/img/lighthouse-logo.png")} alt="lighthouse" className="lighthouse-img" />
-                <h4>Lighthouse</h4>
-                <p>Do pomiaru poziomów wydajności witryny może posłużyć narzędzie Lighthouse. Prosty w obsłudze dodatek pokaże nam jakie wartości przyjmuje dana strona, np. w zakresie pozycjonowania SEO lub wydajności strony.</p>
+                <h4>Wahasz się? Sprawdź nas!</h4>
+                <p>Do pomiaru poziomów jakości witryny może posłużyć narzędzie Lighthouse. Prosty w obsłudze dodatek pokaże nam jakie wartości przyjmuje dana strona, np. w zakresie pozycjonowania SEO lub wydajności witryny.</p>
                 <img src={require("../../static/img/medal.png")} alt="medal" className="medal only-1250" />
             </div>
             <div className="second-row">
                 <Img fluid={data.pomiary.childImageSharp.fluid} alt="pomiary" />
                 <h4>Przykładowe pomiary dla jednej z naszych stron</h4>
-                <p>Jak widać na załączonym obrazku, pomiary na jednym ze zrealizowanych przez nas projektów osiągają prawie maksymalną wartość przy każdym elemencie.</p>
+                <p>Wydajność, dostępność, najlepsze praktyki, SEO - w każdej z czterech kategorii nasze strony uzyskują wyniki bliskie perfekcji.
+                    Nie wierzysz? <a className="sprawdz" target="_blank" rel="noreferrer" href="https://developers.google.com/web/tools/lighthouse">Sprawdź sam</a>!
+                </p>
             </div>
             <div className="third-row">
                 <h3>Nasze projekty to <span className="red bold">w pełni profesjonalne realizacje</span>.</h3>

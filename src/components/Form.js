@@ -40,7 +40,7 @@ export default class Form extends React.Component {
 
     componentDidMount() {
         Modal.setAppElement('.form-section');
-        loadReCaptcha("6Lfy4MYZAAAAAK6I1cH9RUUJOa-2X8H8YzF5nNtv");
+        loadReCaptcha("6Lcu99UZAAAAAJgD8Ilahd7aDmha38UQYqu5mN59");
     }
 
     verifyCallback(res) {
@@ -195,9 +195,6 @@ export default class Form extends React.Component {
                 msg: ""
             });
         }
-        else if(!this.state.isVerified) {
-            console.log("Not verified");
-        }
     }
 
     handlePlany(plan) {
@@ -266,24 +263,24 @@ export default class Form extends React.Component {
                     <h4>Zaznacz, czego potrzebujesz:</h4>
                     <div className="options-strony">
                         <label className="no-select" onClick={(e) => this.handleChange(e, "stronaPortfolio")}>
-                            <button className={!this.state.stronaPortfolio ? "button button-option" : "button button-option no-border"} id="strona-portfolio" >
+                            <button name="strona-portfolio" className={!this.state.stronaPortfolio ? "button button-option" : "button button-option no-border"} id="strona-portfolio" >
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.stronaPortfolio ? "" : "d-none"} />
                             </button>Strona portfolio
                         </label>
                         <label className="no-select" onClick={(e) => this.handleChange(e, "stronaFirmowa")}>
-                            <button className={!this.state.stronaFirmowa ? "button button-option" : "button button-option no-border"} id="strona-firmowa">
+                            <button name="strona-firmowa" className={!this.state.stronaFirmowa ? "button button-option" : "button button-option no-border"} id="strona-firmowa">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.stronaFirmowa ? "" : "d-none"} />
                             </button>
                                 Strona firmowa
                         </label>
                         <label className="no-select" onClick={(e) => this.handleChange(e, "sklepInternetowy")}>
-                            <button className={!this.state.sklepInternetowy ? "button button-option" : "button button-option no-border"} id="sklep-internetowy">
+                            <button name="sklep-internetowy" className={!this.state.sklepInternetowy ? "button button-option" : "button button-option no-border"} id="sklep-internetowy">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.sklepInternetowy ? "" : "d-none"} />
                             </button>
                                 Sklep internetowy
                         </label>
                         <label className="no-select" onClick={(e) => this.handleChange(e, "aplikacjaWww")}>
-                            <button className={!this.state.aplikacjaWww ? "button button-option" : "button button-option no-border"} id="aplikacja-www">
+                            <button name="aplikacja-www" className={!this.state.aplikacjaWww ? "button button-option" : "button button-option no-border"} id="aplikacja-www">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.aplikacjaWww ? "" : "d-none"} />
                             </button>
                                 Aplikacja www
@@ -307,9 +304,12 @@ export default class Form extends React.Component {
                 <div className="left">
                     <h3>Zostaw kontakt do siebie, wypełnij <span className="bold">formularz</span> poniżej:</h3>
                     <form method="POST" action="https://formspree.io/f/moqpjopv" onSubmit={e => this.handleSubmit(e)}>
-                        <input type="text" name="email" placeholder="Adres email" value={this.state.email} onChange={e => this.handleChange(e)} />
+                        <input type="text" id="email" name="email" placeholder="Adres email" value={this.state.email} onChange={e => this.handleChange(e)} />
+                        <label htmlFor="email" className="d-none">Adres email</label>
                         <input type="text" name="phoneNumber" placeholder="Numer telefonu" value={this.state.phoneNumber} onChange={e => this.handleChange(e)} />
-                        <textarea name="msg" className="msg" placeholder="Pytania, sugestie, uwagi (opcjonalnie)" value={this.state.msg} onChange={e => this.handleChange(e)}/>
+                        <label htmlFor="phoneNumber" className="d-none">Numer telefonu</label>
+                        <textarea name="msg" id="msg" className="msg" placeholder="Pytania, sugestie, uwagi (opcjonalnie)" value={this.state.msg} onChange={e => this.handleChange(e)}/>
+                        <label htmlFor="msg" className="d-none">Wiadomość</label>
                         <p className="disclaimer">Wypełnij preferowaną formę kontaktu - mail lub numer telefonu.</p>
                         <div className={this.state.formError !== "" ? "errors only-1200" : "d-none"}>
                             Hej, mamy problem z wysłaniem Twojego formularza.<br/>
@@ -317,12 +317,12 @@ export default class Form extends React.Component {
                         </div>
                         <div className="recaptcha">
                             <ReCaptcha
-                                sitekey="6Lfy4MYZAAAAAK6I1cH9RUUJOa-2X8H8YzF5nNtv"
+                                sitekey="6Lcu99UZAAAAAJgD8Ilahd7aDmha38UQYqu5mN59"
                                 render="implicit"
                                 verifyCallback={this.verifyCallback}
                             />
                         </div>
-                        <button type="submit" className="button button-submit">Wyślij</button>
+                        <button name="submit" type="submit" className="button button-submit">Wyślij</button>
                     </form>
                 </div>
                 <div className="right">
