@@ -40,7 +40,7 @@ export default class Form extends React.Component {
 
     componentDidMount() {
         Modal.setAppElement('.form-section');
-        loadReCaptcha("6Lcu99UZAAAAAJgD8Ilahd7aDmha38UQYqu5mN59");
+        loadReCaptcha("6LccndkZAAAAAF6nVrqQBncXMnOlHkickBIczXwR");
     }
 
     verifyCallback(res) {
@@ -317,7 +317,7 @@ export default class Form extends React.Component {
                         </div>
                         <div className="recaptcha">
                             <ReCaptcha
-                                sitekey="6Lcu99UZAAAAAJgD8Ilahd7aDmha38UQYqu5mN59"
+                                sitekey="6LccndkZAAAAAF6nVrqQBncXMnOlHkickBIczXwR"
                                 render="implicit"
                                 verifyCallback={this.verifyCallback}
                             />
