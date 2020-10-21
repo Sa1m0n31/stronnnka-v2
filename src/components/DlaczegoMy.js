@@ -6,45 +6,52 @@ const DlaczegoMy = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".dlaczego-my",
-                start: "top 80%"
-            }});
+        let width;
+        if(typeof window !== 'undefined') {
+            width = window.innerWidth;
+        }
 
-        gsap.fromTo(item1.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".dlaczego-my",
-                start: "top 50%"
-            }});
-        gsap.fromTo(item2.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".dlaczego-my",
-                start: "top 25%"
-            }});
-        gsap.fromTo(item3.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".dlaczego-my",
-                start: "top 15%"
-            }});
-        gsap.fromTo(item4.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".trigger-2",
-                start: "top 100%"
-            }});
-        gsap.fromTo(item5.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".trigger-2",
-                start: "top 85%"
-            }});
-        gsap.fromTo(item6.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".trigger-2",
-                start: "top 55%"
-            }});
-        gsap.fromTo(item7.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".trigger-2",
-                start: "top 85%"
-            }});
+        if(width > 900) {
+            gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".dlaczego-my",
+                    start: "top 80%"
+                }});
 
-        gsap.set(siedem.current, { x: -100, opacity: 0 });
-        gsap.to(siedem.current, { x: 0, duration: .6, opacity: 1, scrollTrigger: {
-                trigger: ".dlaczego-my-inner",
-                start: "top 90%"
-            }});
+            gsap.fromTo(item1.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".dlaczego-my",
+                    start: "top 50%"
+                }});
+            gsap.fromTo(item2.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".dlaczego-my",
+                    start: "top 25%"
+                }});
+            gsap.fromTo(item3.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".dlaczego-my",
+                    start: "top 15%"
+                }});
+            gsap.fromTo(item4.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".trigger-2",
+                    start: "top 100%"
+                }});
+            gsap.fromTo(item5.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".trigger-2",
+                    start: "top 85%"
+                }});
+            gsap.fromTo(item6.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".trigger-2",
+                    start: "top 55%"
+                }});
+            gsap.fromTo(item7.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".trigger-2",
+                    start: "top 85%"
+                }});
+
+            gsap.set(siedem.current, { x: -100, opacity: 0 });
+            gsap.to(siedem.current, { x: 0, duration: .6, opacity: 1, scrollTrigger: {
+                    trigger: ".dlaczego-my-inner",
+                    start: "top 90%"
+                }});
+        }
     }, []);
 
     const header = useRef(null);

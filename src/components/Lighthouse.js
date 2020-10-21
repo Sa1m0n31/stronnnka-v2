@@ -19,26 +19,41 @@ const Lighthouse = () => {
 
     gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {
-        gsap.set(slogan.current, { x: -1000, opacity: 0 });
-        gsap.set(slideFromLeft.current, { x: -3000, opacity: 0 });
-        gsap.set(slideFromRight.current, { x: 3000, opacity: 0 });
-        gsap.to(slogan.current, { x: 0, opacity: 1, duration: 1, scrollTrigger: {
-                trigger: ".slogan-trigger",
-                start: "top 100%"
-            } });
-        gsap.fromTo([header1.current, header2.current], { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".lighthouse",
-                start: "top 80%"
-            } });
+        let width;
+        if(typeof window !== 'undefined') {
+            width = window.innerWidth;
+        }
 
-        gsap.to(slideFromLeft.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".left-trigger",
-                start: "top 60%"
-            } });
-        gsap.to(slideFromRight.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".right-trigger",
-                start: "top 60%"
-            } });
+        if(width > 700) {
+            gsap.set(slogan.current, {x: -1000, opacity: 0});
+            gsap.set(slideFromLeft.current, {x: -3000, opacity: 0});
+            gsap.set(slideFromRight.current, {x: 3000, opacity: 0});
+            gsap.to(slogan.current, {
+                x: 0, opacity: 1, duration: 1, scrollTrigger: {
+                    trigger: ".slogan-trigger",
+                    start: "top 100%"
+                }
+            });
+            gsap.fromTo([header1.current, header2.current], {y: -200, opacity: 0}, {
+                y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".lighthouse",
+                    start: "top 80%"
+                }
+            });
+
+            gsap.to(slideFromLeft.current, {
+                x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".left-trigger",
+                    start: "top 60%"
+                }
+            });
+            gsap.to(slideFromRight.current, {
+                x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".right-trigger",
+                    start: "top 60%"
+                }
+            });
+        }
     }, []);
 
     const slogan = useRef(null);

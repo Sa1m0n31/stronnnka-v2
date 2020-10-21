@@ -20,6 +20,9 @@ export default function Home() {
           <title>Skylo - profesjonalne witryny dla firm</title>
           <meta name="description" content="Tanie i profesjonalne projekty stron internetowych"/>
           <link rel="icon" type="icon/png" href={require("../../static/img/skylo-favicon.png")} sizes="16x16" />
+          <meta name="theme-color" content="#BB293D" />
+          <meta name="msapplication-navbutton-color" content="#BB293D" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#BB293D" />
       </Helmet>
       <LandingPage/>
       <DlaczegoMy/>

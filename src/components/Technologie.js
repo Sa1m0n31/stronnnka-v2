@@ -25,21 +25,6 @@ const Technologie = () => {
                     start: "top 5%"
                 } });
         }
-        else {
-            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], { opacity: 0, y: 400 });
-            gsap.to([item1.current, item2.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
-                    trigger: ".technologie",
-                    start: "top 15%"
-                } });
-            gsap.to([item3.current, item4.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
-                    trigger: ".technologie",
-                    start: "top 0%"
-                } });
-            gsap.to([item5.current, item6.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
-                    trigger: ".technologie",
-                    start: "top -10%"
-                } });
-        }
     }, []);
 
     const item1 = useRef(null);

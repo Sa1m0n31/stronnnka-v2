@@ -64,6 +64,7 @@ export default class Form extends React.Component {
             width = window.innerWidth;
         }
 
+        if(width > 700) {
         /* Header */
         gsap.fromTo([this.state.header1.current, this.state.header2.current], { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
                 trigger: ".form-section",
@@ -76,7 +77,6 @@ export default class Form extends React.Component {
                 trigger: ".form-section",
                 start: "top 50%"
             }});
-        if(width > 700) {
             gsap.to(this.state.option4.current, { x: 0, opacity: 1, delay: .3, duration: .3, scrollTrigger: {
                     trigger: ".form-section",
                     start: "top 50%"
@@ -93,26 +93,6 @@ export default class Form extends React.Component {
                     trigger: ".form-section",
                     start: "top 50%"
                 }});
-        }
-        else {
-            gsap.to(this.state.option1.current, { x: 0, opacity: 1, delay: .3, duration: .3, scrollTrigger: {
-                    trigger: ".form-section",
-                    start: "top 50%"
-                }});
-            gsap.to(this.state.option2.current, { x: 0, opacity: 1, delay: .6, duration: .3, scrollTrigger: {
-                    trigger: ".form-section",
-                    start: "top 50%"
-                }});
-            gsap.to(this.state.option3.current, { x: 0, opacity: 1, delay: .9, duration: .3, scrollTrigger: {
-                    trigger: ".form-section",
-                    start: "top 50%"
-                }});
-            gsap.to(this.state.option4.current, { x: 0, opacity: 1, delay: 1.2, duration: .3, scrollTrigger: {
-                    trigger: ".form-section",
-                    start: "top 50%"
-                }});
-
-        }
 
         /* Plans */
         if(typeof document !== 'undefined') {
@@ -132,13 +112,11 @@ export default class Form extends React.Component {
         }
 
         /* Form */
-        gsap.set([this.state.kontaktRef.current, this.state.emailRef.current, this.state.telefonRef.current, this.state.msgRef.current, this.state.btnRef.current, this.state.disclaimerRef.current], { x: -1000, opacity: 0 });
-        gsap.to(this.state.kontaktRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+            gsap.set([this.state.kontaktRef.current, this.state.emailRef.current, this.state.telefonRef.current, this.state.msgRef.current, this.state.btnRef.current, this.state.disclaimerRef.current], { x: -1000, opacity: 0 });
+            gsap.to(this.state.kontaktRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
                 trigger: ".third-row",
                 start: "top 80%"
             }});
-
-        if(width > 700) {
             gsap.to(this.state.emailRef.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
                     trigger: ".third-row",
                     start: "top 70%",
@@ -147,7 +125,7 @@ export default class Form extends React.Component {
                     trigger: ".third-row",
                     start: "top 70%",
                 }});
-            gsap.to(this.state.msgRef.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
+            gsap.to(this.state.msgRef.current, { x: 0, opacity: 1, duration: .5, delay: 1, scrollTrigger: {
                     trigger: ".third-row",
                     start: "top 70%",
                 }});
@@ -164,28 +142,6 @@ export default class Form extends React.Component {
             gsap.to(this.state.reminder.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
                     trigger: ".third-row",
                     start: "top 80%",
-                }});
-        }
-        else {
-            gsap.to(this.state.emailRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                    trigger: ".third-row",
-                    start: "top 70%",
-                }});
-            gsap.to(this.state.telefonRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                    trigger: ".third-row",
-                    start: "top 70%",
-                }});
-            gsap.to(this.state.msgRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                    trigger: ".third-row",
-                    start: "top 70%",
-                }});
-            gsap.to(this.state.disclaimerRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                    trigger: ".third-row",
-                    start: "top 50%",
-                }});
-            gsap.to(this.state.btnRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
-                    trigger: ".third-row",
-                    start: "top 50%",
                 }});
         }
     }

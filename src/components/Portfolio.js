@@ -9,15 +9,26 @@ const Portfolio = () => {
     const header = useRef(null);
 
     useEffect(() => {
-        gsap.set([item1.current, item2.current], {scale: 0, opacity: 0});
-        gsap.to([item1.current, item2.current], { scale: 1, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".portfolio",
-                start: "top 50%"
-            } });
-        gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".portfolio",
-                start: "top 80%"
-            } });
+        let width;
+        if(typeof window !== 'undefined') {
+            width = window.innerWidth;
+        }
+
+        if(width > 700) {
+            gsap.set([item1.current, item2.current], {scale: 0, opacity: 0});
+            gsap.to([item1.current, item2.current], {
+                scale: 1, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".portfolio",
+                    start: "top 50%"
+                }
+            });
+            gsap.fromTo(header.current, {y: -200, opacity: 0}, {
+                y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".portfolio",
+                    start: "top 80%"
+                }
+            });
+        }
     }, []);
 
 
