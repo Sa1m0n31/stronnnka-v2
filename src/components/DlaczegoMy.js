@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+
+import { gsap, ScrollTrigger } from 'gsap/all';
 
 const DlaczegoMy = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                trigger: ".dlaczego-my",
+                start: "top 80%"
+            } });
+    }, []);
+
+    const header = useRef(null);
 
     return (<section className="dlaczego-my">
-        <h2>Z nami zyskujesz</h2>
+        <h2 ref={header}>Z nami zyskujesz</h2>
         <div className="dlaczego-my-inner">
             <h3 className="only-1500">
                 Twoje<br/>

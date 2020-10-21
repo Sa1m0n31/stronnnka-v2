@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap, ScrollTrigger } from 'gsap/all';
 
 const Technologie = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], { opacity: 0, y: 400 });
+        gsap.to([item1.current, item2.current, item3.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                trigger: ".technologie",
+                start: "top 10%"
+            } });
+        gsap.to([item4.current, item5.current, item6.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                trigger: ".scroll-trigger-2",
+                start: "top 50%"
+            } });
+        gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                trigger: ".portfolio",
+                start: "top 5%"
+            } })
+    }, []);
+
+    const item1 = useRef(null);
+    const item2 = useRef(null);
+    const item3 = useRef(null);
+    const item4 = useRef(null);
+    const item5 = useRef(null);
+    const item6 = useRef(null);
+    const header = useRef(null);
+
     return (<section className="technologie">
-        <h2>Jakich technologii używamy przy tworzeniu Twojej strony?</h2>
+        <h2 ref={header}>Jakich technologii używamy przy tworzeniu Twojej strony?</h2>
         <div className="technologie-grid">
-            <div className="technologie-item">
+            <div ref={item1} className="technologie-item">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/react.png")} alt="react" />
                 </div>
@@ -14,7 +41,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div className="technologie-item">
+            <div ref={item2} className="technologie-item">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/adobeXD.png")} alt="adobexd" />
                 </div>
@@ -24,7 +51,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div className="technologie-item">
+            <div ref={item3} className="technologie-item scroll-trigger-2">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/gatsby.png")} alt="gatsby" />
                 </div>
@@ -34,7 +61,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div className="technologie-item">
+            <div ref={item4} className="technologie-item">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/bootstrap.png")} alt="bootstrap" />
                 </div>
@@ -44,7 +71,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div className="technologie-item">
+            <div ref={item5} className="technologie-item">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/nodejs.png")} alt="nodejs" />
                 </div>
@@ -54,7 +81,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div className="technologie-item">
+            <div ref={item6} className="technologie-item">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/wordpress.png")} alt="wordpress" />
                 </div>

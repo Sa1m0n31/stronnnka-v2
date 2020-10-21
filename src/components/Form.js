@@ -3,7 +3,7 @@ import React from "react";
 import Cards from "./Cards";
 import plany from "../helpers/plany";
 
-import { gsap } from 'gsap/all';
+import { gsap, ScrollTrigger } from 'gsap/all';
 import Modal from 'react-modal';
 
 import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3';
@@ -28,7 +28,9 @@ export default class Form extends React.Component {
             price: 600,
             open: false,
             isVerified: false,
-            status: ""
+            status: "",
+            header1: React.createRef(),
+            header2: React.createRef()
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,6 +43,12 @@ export default class Form extends React.Component {
     componentDidMount() {
         Modal.setAppElement('.form-section');
         loadReCaptcha("6LccndkZAAAAAF6nVrqQBncXMnOlHkickBIczXwR");
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.fromTo([this.state.header1.current, this.state.header2.current], { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                trigger: ".form-section",
+                start: "top 80%"
+            } });
     }
 
     verifyCallback(res) {
@@ -256,8 +264,8 @@ export default class Form extends React.Component {
                 </div>
             </Modal>
 
-            <h2>Ubijemy ten interes?</h2>
-            <h3>Darmowa wycena w 24h</h3>
+            <h2 ref={this.state.header1}>Ubijemy ten interes?</h2>
+            <h3 ref={this.state.header2}>Darmowa wycena w 24h</h3>
             <div className="first-row">
                 <div className="left">
                     <h4>Zaznacz, czego potrzebujesz:</h4>

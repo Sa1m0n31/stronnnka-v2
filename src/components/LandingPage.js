@@ -2,11 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image';
 
-import { gsap, Power4 } from "gsap/all";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 import Menu from "./Menu";
 
 const LandingPage = () => {
+    gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {
         if(typeof window !== 'undefined') {
             window.addEventListener("scroll", () => {
@@ -24,6 +25,10 @@ const LandingPage = () => {
                else setMobile(false);
             });
         }
+
+        gsap.set([h1.current, h2.current, btn.current], { y: -200, opacity: 0 });
+        gsap.to([h1.current, h2.current, btn.current], { y: 0, opacity: 1, duration: 1.5 });
+
     }, []);
 
     let [mobile, setMobile] = useState(false);
@@ -48,6 +53,9 @@ const LandingPage = () => {
     `);
 
     const up = useRef(null);
+    const h1 = useRef(null);
+    const h2 = useRef(null);
+    const btn = useRef(null);
 
     const goTo = (arg) => {
         if((typeof document !== 'undefined')&&(typeof window !== 'undefined')) {
@@ -69,9 +77,9 @@ const LandingPage = () => {
         <Menu />
         <div className="landing-container">
             <div className="landing-inner">
-                <h1>Tworzymy <span className="bold">pod Ciebie</span></h1>
-                <h2>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. {mobile ? "" : "Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług."}</h2>
-                <button className="button button-landing no-select" onClick={() => goTo(".form-section")}>
+                <h1 ref={h1}>Tworzymy <span className="bold">pod Ciebie</span></h1>
+                <h2 ref={h2}>Profesjonalne projekty stron, sklepów internetowych, aplikacji WWW, grafiki reklamowej. {mobile ? "" : "Sprawdź nasze portfolio i skontaktuj się z nami, aby uzyskać więcej informacji na temat usług."}</h2>
+                <button ref={btn} className="button button-landing no-select" onClick={() => goTo(".form-section")}>
                     {mobile ? "Zostaw do siebie kontakt" : "Skontaktuj się z nami"}
                     <div className="hover only-700">Wypełnij formularz</div>
                 </button>
