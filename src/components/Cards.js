@@ -37,7 +37,7 @@ const Cards = ({option, plany, togglePlany}) => {
 
     return (<>
         {/* STANDARD */}
-        <div className={standard ? "plan choice no-select" : "plan no-select"} onClick={() => handlePlany("standard")}>
+        <div id="plan1" className={standard ? "plan choice no-select" : "plan no-select"} onClick={() => handlePlany("standard")}>
             <button className="button button-opcje">Standard</button>
             <h5 className="description">Standardowe opcje na stronie</h5>
             <ul className="attributes">
@@ -49,7 +49,7 @@ const Cards = ({option, plany, togglePlany}) => {
         </div>
         {/* PROFESJONALNY */}
         <h5 className="zalecany-plan desktop-only no-select">Wybór klientów</h5>
-        <div className="best-plan no-select">
+        <div id="plan2" className="best-plan no-select">
             <div className={profesjonalny ? "plan choice no-select" : "plan no-select"} onClick={() => handlePlany("profesjonalny")}>
                 <img src={require("../../static/img/gwiazdka.png")} alt="gwiazdka" className="gwiazdka"/>
                 <button className="button button-opcje">Profesjonalny</button>
@@ -63,7 +63,7 @@ const Cards = ({option, plany, togglePlany}) => {
             </div>
         </div>
         {/* ULTIMATE */}
-        <div className={ultimate ? "plan choice no-select" : "plan no-select"} onClick={() => handlePlany("ultimate")}>
+        <div id="plan3" className={ultimate ? "plan choice no-select" : "plan no-select"} onClick={() => handlePlany("ultimate")}>
             <button className="button button-opcje">Ultimate</button>
             <h5 className="description">Coś więcej niż strona...</h5>
             <ul className="attributes">

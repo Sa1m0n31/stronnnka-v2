@@ -9,20 +9,63 @@ const DlaczegoMy = () => {
         gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
                 trigger: ".dlaczego-my",
                 start: "top 80%"
-            } });
+            }});
+
+        gsap.fromTo(item1.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".dlaczego-my",
+                start: "top 50%"
+            }});
+        gsap.fromTo(item2.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".dlaczego-my",
+                start: "top 25%"
+            }});
+        gsap.fromTo(item3.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".dlaczego-my",
+                start: "top 15%"
+            }});
+        gsap.fromTo(item4.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".trigger-2",
+                start: "top 100%"
+            }});
+        gsap.fromTo(item5.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".trigger-2",
+                start: "top 85%"
+            }});
+        gsap.fromTo(item6.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".trigger-2",
+                start: "top 55%"
+            }});
+        gsap.fromTo(item7.current, { y: 232, x: 231, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 1, scrollTrigger: {
+                trigger: ".trigger-2",
+                start: "top 85%"
+            }});
+
+        gsap.set(siedem.current, { x: -100, opacity: 0 });
+        gsap.to(siedem.current, { x: 0, duration: .6, opacity: 1, scrollTrigger: {
+                trigger: ".dlaczego-my-inner",
+                start: "top 90%"
+            }});
     }, []);
 
     const header = useRef(null);
+    const item1 = useRef(null);
+    const item2 = useRef(null);
+    const item3 = useRef(null);
+    const item4 = useRef(null);
+    const item5 = useRef(null);
+    const item6 = useRef(null);
+    const item7 = useRef(null);
+    const siedem = useRef(null);
 
     return (<section className="dlaczego-my">
         <h2 ref={header}>Z nami zyskujesz</h2>
         <div className="dlaczego-my-inner">
             <h3 className="only-1500">
-                Twoje<br/>
-                <span className="red bold">siedem</span><br/>
-                korzyści
+                <span ref={siedem}>Twoje<br/>
+                <span className="red bold">siedem</span>
+                    korzyści</span>
             </h3>
-            <div className="powod-item powod-item-left">
+            <div ref={item1} className="powod-item powod-item-left">
                 <div className="powod-img">
                     <img src={require("../../static/img/indywidualne-podejscie.svg")} alt="indywidualne-podejscie" />
                 </div>
@@ -32,7 +75,7 @@ const DlaczegoMy = () => {
 
             <img src={require("../../static/img/strzalki1.png")} alt="strzalki" className="arrow only-1500" />
 
-            <div className="powod-item powod-item-left">
+            <div ref={item2} className="powod-item powod-item-left">
                 <div className="powod-img">
                     <img src={require("../../static/img/doswiadczenie.svg")} alt="doswiadczenie" />
                 </div>
@@ -40,7 +83,7 @@ const DlaczegoMy = () => {
                 <p>Tworzymy strony nie od dziś. Nasze przeszłe projekty możesz sprawdzić w portfolio.</p>
             </div>
 
-            <div className="powod-item powod-item-left">
+            <div ref={item3} className="powod-item powod-item-left">
                 <div className="powod-img">
                     <img src={require("../../static/img/pozycjonowanie.svg")} alt="pozycjonowanie" />
                 </div>
@@ -50,7 +93,7 @@ const DlaczegoMy = () => {
 
             <img src={require("../../static/img/strzalki2.png")} alt="strzalki" className="arrow2 only-1500" />
 
-            <div className="powod-item powod-item-left">
+            <div ref={item4} className="powod-item powod-item-left trigger-2">
                 <div className="powod-img">
                     <img src={require("../../static/img/wydajnosc.svg")} alt="wydajnosc" />
                 </div>
@@ -60,7 +103,7 @@ const DlaczegoMy = () => {
 
             <img src={require("../../static/img/strzalki3.png")} alt="strzalki" className="arrow3 only-1500" />
 
-            <div className="powod-item powod-item-left">
+            <div ref={item5} className="powod-item powod-item-left">
                 <div className="powod-img">
                     <img src={require("../../static/img/szybkosc-realizacji.svg")} alt="szybkosc-realizacji" />
                 </div>
@@ -70,7 +113,7 @@ const DlaczegoMy = () => {
 
             <img src={require("../../static/img/strzalki4.png")} alt="strzalki" className="arrow4 only-1500" />
 
-            <div className="powod-item powod-item-left">
+            <div ref={item6} className="powod-item powod-item-left">
                 <div className="powod-img">
                     <img src={require("../../static/img/bezpieczenstwo.svg")} alt="bezpieczenstwo" />
                 </div>
@@ -80,7 +123,7 @@ const DlaczegoMy = () => {
 
             <img src={require("../../static/img/strzalki5.png")} alt="strzalki" className="arrow5 only-1500"  />
 
-            <div className="powod-item powod-item-left">
+            <div ref={item7} className="powod-item powod-item-left">
                 <div className="powod-img">
                     <img src={require("../../static/img/cena.svg")} alt="cena" />
                 </div>

@@ -6,10 +6,10 @@ const Footer = () => {
             <div className="column">
                 <h5>Social media</h5>
                 <div className="social-media">
-                    <a href="https://facebook.com" rel="noreferrer" target="_blank">
+                    <a href="https://www.facebook.com/Skylo-profesjonalne-witryny-dla-firm-107515137810946" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/facebook-footer.png")} alt="facebook" />
                     </a>
-                    <a href="https://facebook.com" rel="noreferrer" target="_blank">
+                    <a href="https://twitter.com/SkyloDla" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/twitter-footer.png")} alt="twitter" />
                     </a>
                     <a href="https://facebook.com" rel="noreferrer" target="_blank">

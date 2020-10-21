@@ -30,7 +30,21 @@ export default class Form extends React.Component {
             isVerified: false,
             status: "",
             header1: React.createRef(),
-            header2: React.createRef()
+            header2: React.createRef(),
+            zaznacz: React.createRef(),
+            option1: React.createRef(),
+            option2: React.createRef(),
+            option3: React.createRef(),
+            option4: React.createRef(),
+            plany: React.createRef(),
+            jakiPlan: React.createRef(),
+            kontaktRef: React.createRef(),
+            emailRef: React.createRef(),
+            telefonRef: React.createRef(),
+            msgRef: React.createRef(),
+            disclaimerRef: React.createRef(),
+            btnRef: React.createRef(),
+            reminder: React.createRef()
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,10 +59,135 @@ export default class Form extends React.Component {
         loadReCaptcha("6LccndkZAAAAAF6nVrqQBncXMnOlHkickBIczXwR");
         gsap.registerPlugin(ScrollTrigger);
 
+        let width;
+        if(typeof window !== 'undefined') {
+            width = window.innerWidth;
+        }
+
+        /* Header */
         gsap.fromTo([this.state.header1.current, this.state.header2.current], { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
                 trigger: ".form-section",
                 start: "top 80%"
             } });
+
+        /* Options */
+        gsap.set([this.state.zaznacz.current, this.state.option1.current, this.state.option2.current, this.state.option3.current, this.state.option4.current], { x: -1000, opacity: 0 });
+        gsap.to(this.state.zaznacz.current, { x: 0, opacity: 1, duration: .3, scrollTrigger: {
+                trigger: ".form-section",
+                start: "top 50%"
+            }});
+        if(width > 700) {
+            gsap.to(this.state.option4.current, { x: 0, opacity: 1, delay: .3, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+            gsap.to(this.state.option3.current, { x: 0, opacity: 1, delay: .6, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+            gsap.to(this.state.option2.current, { x: 0, opacity: 1, delay: .9, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+            gsap.to(this.state.option1.current, { x: 0, opacity: 1, delay: 1.2, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+        }
+        else {
+            gsap.to(this.state.option1.current, { x: 0, opacity: 1, delay: .3, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+            gsap.to(this.state.option2.current, { x: 0, opacity: 1, delay: .6, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+            gsap.to(this.state.option3.current, { x: 0, opacity: 1, delay: .9, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+            gsap.to(this.state.option4.current, { x: 0, opacity: 1, delay: 1.2, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 50%"
+                }});
+
+        }
+
+        /* Plans */
+        if(typeof document !== 'undefined') {
+            let plan1 = document.querySelector("#plan1");
+            let plan2 = document.querySelector("#plan2");
+            let plan3 = document.querySelector("#plan3");
+
+            gsap.set([this.state.jakiPlan.current, plan1, plan2, plan3], { y: 200, opacity: 0 });
+            gsap.to(this.state.jakiPlan.current, { y: 0, opacity: 1, delay: 1.2, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 60%"
+                }});
+            gsap.to([plan1, plan2, plan3], { y: 0, opacity: 1, delay: 1.2, duration: .3, scrollTrigger: {
+                    trigger: ".form-section",
+                    start: "top 60%"
+                }});
+        }
+
+        /* Form */
+        gsap.set([this.state.kontaktRef.current, this.state.emailRef.current, this.state.telefonRef.current, this.state.msgRef.current, this.state.btnRef.current, this.state.disclaimerRef.current], { x: -1000, opacity: 0 });
+        gsap.to(this.state.kontaktRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                trigger: ".third-row",
+                start: "top 80%"
+            }});
+
+        if(width > 700) {
+            gsap.to(this.state.emailRef.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 70%",
+                }});
+            gsap.to(this.state.telefonRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 70%",
+                }});
+            gsap.to(this.state.msgRef.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 70%",
+                }});
+            gsap.to(this.state.disclaimerRef.current, { x: 0, opacity: 1, duration: .5, delay: 1, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 50%",
+                }});
+            gsap.to(this.state.btnRef.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 50%",
+                }});
+
+            gsap.set(this.state.reminder.current, { x: 1000, opacity: 0 });
+            gsap.to(this.state.reminder.current, { x: 0, opacity: 1, duration: .5, delay: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 80%",
+                }});
+        }
+        else {
+            gsap.to(this.state.emailRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 70%",
+                }});
+            gsap.to(this.state.telefonRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 70%",
+                }});
+            gsap.to(this.state.msgRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 70%",
+                }});
+            gsap.to(this.state.disclaimerRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 50%",
+                }});
+            gsap.to(this.state.btnRef.current, { x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".third-row",
+                    start: "top 50%",
+                }});
+        }
     }
 
     verifyCallback(res) {
@@ -251,7 +390,6 @@ export default class Form extends React.Component {
         }
     }
 
-
     render() {
         return (<section className="form-section">
             <Modal isOpen={this.state.open} closeTimeoutMS={500} onRequestClose={() => { this.setState({open: false}); }}>
@@ -268,26 +406,26 @@ export default class Form extends React.Component {
             <h3 ref={this.state.header2}>Darmowa wycena w 24h</h3>
             <div className="first-row">
                 <div className="left">
-                    <h4>Zaznacz, czego potrzebujesz:</h4>
+                    <h4 ref={this.state.zaznacz}>Zaznacz, czego potrzebujesz:</h4>
                     <div className="options-strony">
-                        <label className="no-select" onClick={(e) => this.handleChange(e, "stronaPortfolio")}>
+                        <label ref={this.state.option1} className="no-select" onClick={(e) => this.handleChange(e, "stronaPortfolio")}>
                             <button name="strona-portfolio" className={!this.state.stronaPortfolio ? "button button-option" : "button button-option no-border"} id="strona-portfolio" >
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.stronaPortfolio ? "" : "d-none"} />
                             </button>Strona portfolio
                         </label>
-                        <label className="no-select" onClick={(e) => this.handleChange(e, "stronaFirmowa")}>
+                        <label ref={this.state.option2} className="no-select" onClick={(e) => this.handleChange(e, "stronaFirmowa")}>
                             <button name="strona-firmowa" className={!this.state.stronaFirmowa ? "button button-option" : "button button-option no-border"} id="strona-firmowa">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.stronaFirmowa ? "" : "d-none"} />
                             </button>
                                 Strona firmowa
                         </label>
-                        <label className="no-select" onClick={(e) => this.handleChange(e, "sklepInternetowy")}>
+                        <label ref={this.state.option3} className="no-select" onClick={(e) => this.handleChange(e, "sklepInternetowy")}>
                             <button name="sklep-internetowy" className={!this.state.sklepInternetowy ? "button button-option" : "button button-option no-border"} id="sklep-internetowy">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.sklepInternetowy ? "" : "d-none"} />
                             </button>
                                 Sklep internetowy
                         </label>
-                        <label className="no-select" onClick={(e) => this.handleChange(e, "aplikacjaWww")}>
+                        <label ref={this.state.option4} className="no-select" onClick={(e) => this.handleChange(e, "aplikacjaWww")}>
                             <button name="aplikacja-www" className={!this.state.aplikacjaWww ? "button button-option" : "button button-option no-border"} id="aplikacja-www">
                                 <img src={require("../../static/img/oki.png")} alt="ok" className={this.state.aplikacjaWww ? "" : "d-none"} />
                             </button>
@@ -301,24 +439,24 @@ export default class Form extends React.Component {
                 </div>)}
             </div>
             <div className="second-row">
-                <h4>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuję?</>}</h4>
+                <h4 ref={this.state.jakiPlan}>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuję?</>}</h4>
                 <div className="plany-grid">
                     {this.state.aplikacjaWww ? <div className="aplikacjawww-msg">
                         <textarea name="aplikacjaWwwMsg" placeholder="Sposób działania aplikacji, wymagane technologie, główne oczekiwania..." value={this.state.aplikacjaWwwMsg} onChange={e => this.handleChange(e)}/>
-                    </div> : <Cards togglePlany={this.handlePlany} plany={plany} option={this.state.option} />}
+                    </div> : <Cards ref={this.state.plany} togglePlany={this.handlePlany} plany={plany} option={this.state.option} />}
                 </div>
             </div>
             <div className="third-row">
                 <div className="left">
-                    <h3>Zostaw kontakt do siebie, wypełnij <span className="bold">formularz</span> poniżej:</h3>
+                    <h3 ref={this.state.kontaktRef}>Zostaw kontakt do siebie, wypełnij <span className="bold">formularz</span> poniżej:</h3>
                     <form method="POST" action="https://formspree.io/f/moqpjopv" onSubmit={e => this.handleSubmit(e)}>
-                        <input type="text" id="email" name="email" placeholder="Adres email" value={this.state.email} onChange={e => this.handleChange(e)} />
+                        <input ref={this.state.emailRef} type="text" id="email" name="email" placeholder="Adres email" value={this.state.email} onChange={e => this.handleChange(e)} />
                         <label htmlFor="email" className="d-none">Adres email</label>
-                        <input type="text" name="phoneNumber" placeholder="Numer telefonu" value={this.state.phoneNumber} onChange={e => this.handleChange(e)} />
+                        <input ref={this.state.telefonRef} type="text" name="phoneNumber" placeholder="Numer telefonu" value={this.state.phoneNumber} onChange={e => this.handleChange(e)} />
                         <label htmlFor="phoneNumber" className="d-none">Numer telefonu</label>
-                        <textarea name="msg" id="msg" className="msg" placeholder="Pytania, sugestie, uwagi (opcjonalnie)" value={this.state.msg} onChange={e => this.handleChange(e)}/>
+                        <textarea ref={this.state.msgRef} name="msg" id="msg" className="msg" placeholder="Pytania, sugestie, uwagi (opcjonalnie)" value={this.state.msg} onChange={e => this.handleChange(e)}/>
                         <label htmlFor="msg" className="d-none">Wiadomość</label>
-                        <p className="disclaimer">Wypełnij preferowaną formę kontaktu - mail lub numer telefonu.</p>
+                        <p ref={this.state.disclaimerRef} className="disclaimer">Wypełnij preferowaną formę kontaktu - mail lub numer telefonu.</p>
                         <div className={this.state.formError !== "" ? "errors only-1200" : "d-none"}>
                             Hej, mamy problem z wysłaniem Twojego formularza.<br/>
                             * {this.state.formError}
@@ -330,11 +468,11 @@ export default class Form extends React.Component {
                                 verifyCallback={this.verifyCallback}
                             />
                         </div>
-                        <button name="submit" type="submit" className="button button-submit">Wyślij</button>
+                        <button ref={this.state.btnRef} name="submit" type="submit" className="button button-submit">Wyślij</button>
                     </form>
                 </div>
                 <div className="right">
-                    <p>Po wysłaniu formularza skontaktujemy się z Tobą <span className="bold">w przeciągu maksymalnie 24 godzin.</span><br/>
+                    <p ref={this.state.reminder}>Po wysłaniu formularza skontaktujemy się z Tobą <span className="bold">w przeciągu maksymalnie 24 godzin.</span><br/>
                         Pamiętaj, że <span className="bold">ostateczna wycena usługi zostanie ustalona podczas rozmów pomiędzy nami a Tobą.</span></p>
 
                     <div className={this.state.formError !== "" ? "errors" : "d-none"}>

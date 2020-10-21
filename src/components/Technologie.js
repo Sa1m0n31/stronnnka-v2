@@ -5,19 +5,41 @@ const Technologie = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], { opacity: 0, y: 400 });
-        gsap.to([item1.current, item2.current, item3.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
-                trigger: ".technologie",
-                start: "top 10%"
-            } });
-        gsap.to([item4.current, item5.current, item6.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
-                trigger: ".scroll-trigger-2",
-                start: "top 50%"
-            } });
-        gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
-                trigger: ".portfolio",
-                start: "top 5%"
-            } })
+        let width;
+        if(typeof window !== 'undefined') {
+            width = window.innerWidth;
+        }
+
+        if(width > 700) {
+            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], { opacity: 0, y: 400 });
+            gsap.to([item1.current, item2.current, item3.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                    trigger: ".technologie",
+                    start: "top 10%"
+                } });
+            gsap.to([item4.current, item5.current, item6.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                    trigger: ".scroll-trigger-2",
+                    start: "top 50%"
+                } });
+            gsap.fromTo(header.current, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: .5, scrollTrigger: {
+                    trigger: ".portfolio",
+                    start: "top 5%"
+                } });
+        }
+        else {
+            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], { opacity: 0, y: 400 });
+            gsap.to([item1.current, item2.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                    trigger: ".technologie",
+                    start: "top 15%"
+                } });
+            gsap.to([item3.current, item4.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                    trigger: ".technologie",
+                    start: "top 0%"
+                } });
+            gsap.to([item5.current, item6.current], { opacity: 1, y: 0, duration: .5, scrollTrigger: {
+                    trigger: ".technologie",
+                    start: "top -10%"
+                } });
+        }
     }, []);
 
     const item1 = useRef(null);
@@ -51,7 +73,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div ref={item3} className="technologie-item scroll-trigger-2">
+            <div ref={item3} className="technologie-item scroll-trigger-2 technologie-second-line">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/gatsby.png")} alt="gatsby" />
                 </div>
@@ -71,7 +93,7 @@ const Technologie = () => {
                 </div>
             </div>
 
-            <div ref={item5} className="technologie-item">
+            <div ref={item5} className="technologie-item technologie-third-line">
                 <div className="technologie-item-img">
                     <img src={require("../../static/img/nodejs.png")} alt="nodejs" />
                 </div>

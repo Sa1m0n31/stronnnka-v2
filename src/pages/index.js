@@ -17,8 +17,9 @@ export default function Home() {
   return (<div className="app">
       <Helmet htmlAttributes={{lang: "pl"}}>
           <meta charSet="utf-8" />
-          <title>Stronnnka</title>
+          <title>Skylo - profesjonalne witryny dla firm</title>
           <meta name="description" content="Tanie i profesjonalne projekty stron internetowych"/>
+          <link rel="icon" type="icon/png" href={require("../../static/img/skylo-favicon.png")} sizes="16x16" />
       </Helmet>
       <LandingPage/>
       <DlaczegoMy/>

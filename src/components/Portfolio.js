@@ -40,7 +40,7 @@ const Portfolio = () => {
             </div>
 
             <div ref={item2} className="portfolio-item">
-                <img src={require("../../static/img/portfolio1.png")} alt="portfolio-1" className="portfolio-img"/>
+                <img src={require("../../static/img/portfolio2.png")} alt="portfolio-2" className="portfolio-img"/>
                 <div className="portfolio-overlay">
                     <h3>kacperadamski.pl</h3>
                     <h4>Strona portfolio dla specjalisty ds. marketingu, Pana Kacpra Adamskiego</h4>

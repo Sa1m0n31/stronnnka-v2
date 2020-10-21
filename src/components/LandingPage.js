@@ -85,10 +85,10 @@ const LandingPage = () => {
                 </button>
             </div>
             <div className="social-media">
-                <a target="_blank" rel="noreferrer" href="https://facebook.com">
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Skylo-profesjonalne-witryny-dla-firm-107515137810946">
                     <img src={require("../../static/img/facebook.png")} alt="facebook" />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://facebook.com">
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/SkyloDla">
                     <img src={require("../../static/img/twitter.png")} alt="twitter" />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://facebook.com">
