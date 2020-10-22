@@ -43,8 +43,7 @@ const Lighthouse = () => {
             gsap.to(slideFromLeft.current, {
                 y: 0, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".left-trigger",
-                    start: "top 100%",
-                    markers: true
+                    start: "top 100%"
                 }
             });
             gsap.to(slideFromRight.current, {
