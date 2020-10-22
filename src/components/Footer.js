@@ -12,7 +12,7 @@ const Footer = () => {
                     <a href="https://twitter.com/SkyloDla" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/twitter-footer.png")} alt="twitter" />
                     </a>
-                    <a href="https://facebook.com" rel="noreferrer" target="_blank">
+                    <a href="https://www.instagram.com/skylopl/?fbclid=IwAR1iJNegq_RFGIHzQ94v7tq7KY68HAAgZCaWQy6HWMKvmkgGDMxHLW5UqME" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/instagram-footer.png")} alt="instagram" />
                     </a>
                 </div>

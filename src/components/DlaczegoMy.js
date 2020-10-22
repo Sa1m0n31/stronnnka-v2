@@ -45,12 +45,6 @@ const DlaczegoMy = () => {
                     trigger: ".trigger-2",
                     start: "top 85%"
                 }});
-
-            gsap.set(siedem.current, { x: -100, opacity: 0 });
-            gsap.to(siedem.current, { x: 0, duration: .6, opacity: 1, scrollTrigger: {
-                    trigger: ".dlaczego-my-inner",
-                    start: "top 90%"
-                }});
         }
     }, []);
 

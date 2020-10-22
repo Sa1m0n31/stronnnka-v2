@@ -26,8 +26,7 @@ const Lighthouse = () => {
 
         if(width > 700) {
             gsap.set(slogan.current, {x: -1000, opacity: 0});
-            gsap.set(slideFromLeft.current, {x: -3000, opacity: 0});
-            gsap.set(slideFromRight.current, {x: 3000, opacity: 0});
+            gsap.set([slideFromLeft.current, slideFromRight.current], {y: 300, opacity: 0});
             gsap.to(slogan.current, {
                 x: 0, opacity: 1, duration: 1, scrollTrigger: {
                     trigger: ".slogan-trigger",
@@ -42,15 +41,16 @@ const Lighthouse = () => {
             });
 
             gsap.to(slideFromLeft.current, {
-                x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                y: 0, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".left-trigger",
-                    start: "top 60%"
+                    start: "top 100%",
+                    markers: true
                 }
             });
             gsap.to(slideFromRight.current, {
-                x: 0, opacity: 1, duration: .5, scrollTrigger: {
+                y: 0, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".right-trigger",
-                    start: "top 60%"
+                    start: "top 100%"
                 }
             });
         }

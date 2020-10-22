@@ -91,7 +91,7 @@ const LandingPage = () => {
                 <a target="_blank" rel="noreferrer" href="https://twitter.com/SkyloDla">
                     <img src={require("../../static/img/twitter.png")} alt="twitter" />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://facebook.com">
+                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/skylopl/?fbclid=IwAR1iJNegq_RFGIHzQ94v7tq7KY68HAAgZCaWQy6HWMKvmkgGDMxHLW5UqME">
                     <img src={require("../../static/img/instagram.png")} alt="instagram" />
                 </a>
             </div>
