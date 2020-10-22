@@ -353,7 +353,7 @@ export default class Form extends React.Component {
                 </div>)}
             </div>
             <div className="second-row">
-                <h4 ref={this.state.jakiPlan}>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuję?</>}</h4>
+                <h4 ref={this.state.jakiPlan}>{this.state.aplikacjaWww ? "Napisz, czego potrzebujesz: " : <>Jaki <span className='bold'>plan</span> Cię interesuje?</>}</h4>
                 <div className="plany-grid">
                     {this.state.aplikacjaWww ? <div className="aplikacjawww-msg">
                         <textarea name="aplikacjaWwwMsg" placeholder="Sposób działania aplikacji, wymagane technologie, główne oczekiwania..." value={this.state.aplikacjaWwwMsg} onChange={e => this.handleChange(e)}/>

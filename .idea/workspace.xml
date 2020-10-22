@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lighthouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lighthouse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +107,7 @@
       <workItem from="1603217316111" duration="7136000" />
       <workItem from="1603285312142" duration="10031000" />
       <workItem from="1603322232088" duration="1992000" />
-      <workItem from="1603356785140" duration="1630000" />
+      <workItem from="1603356785140" duration="2157000" />
     </task>
     <servers />
   </component>
