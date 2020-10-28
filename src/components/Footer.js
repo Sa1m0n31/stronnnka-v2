@@ -9,7 +9,7 @@ const Footer = () => {
                     <a href="https://www.facebook.com/Skylo-profesjonalne-witryny-dla-firm-107515137810946" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/facebook-footer.png")} alt="facebook" />
                     </a>
-                    <a href="https://twitter.com/SkyloDla" rel="noreferrer" target="_blank">
+                    <a href="https://twitter.com/skylopl" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/twitter-footer.png")} alt="twitter" />
                     </a>
                     <a href="https://www.instagram.com/skylopl/?fbclid=IwAR1iJNegq_RFGIHzQ94v7tq7KY68HAAgZCaWQy6HWMKvmkgGDMxHLW5UqME" rel="noreferrer" target="_blank">

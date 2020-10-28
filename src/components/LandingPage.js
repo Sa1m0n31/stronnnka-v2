@@ -88,7 +88,7 @@ const LandingPage = () => {
                 <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Skylo-profesjonalne-witryny-dla-firm-107515137810946">
                     <img src={require("../../static/img/facebook.png")} alt="facebook" />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://twitter.com/SkyloDla">
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/skylopl">
                     <img src={require("../../static/img/twitter.png")} alt="twitter" />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://www.instagram.com/skylopl/?fbclid=IwAR1iJNegq_RFGIHzQ94v7tq7KY68HAAgZCaWQy6HWMKvmkgGDMxHLW5UqME">
