@@ -6,6 +6,7 @@ const Portfolio = () => {
 
     const item1 = useRef(null);
     const item2 = useRef(null);
+    const item3 = useRef(null);
     const header = useRef(null);
 
     useEffect(() => {
@@ -15,8 +16,8 @@ const Portfolio = () => {
         }
 
         if(width > 700) {
-            gsap.set([item1.current, item2.current], {scale: 0, opacity: 0});
-            gsap.to([item1.current, item2.current], {
+            gsap.set([item1.current, item2.current, item3.current], {scale: 0, opacity: 0});
+            gsap.to([item1.current, item2.current, item3.current], {
                 scale: 1, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".portfolio",
                     start: "top 50%"
@@ -51,6 +52,17 @@ const Portfolio = () => {
             </div>
 
             <div ref={item2} className="portfolio-item">
+                <img src={require("../../static/img/portfolio-3.png")} alt="portfolio-3" className="portfolio-img" />
+                <div className="portfolio-overlay">
+                    <h3>Skibos</h3>
+                    <h4>Grafika dla kanału YouTube</h4>
+                    <a href="https://www.youtube.com/user/maciejskib" rel="noreferrer" target="_blank">
+                        <img src={require("../../static/img/link.png")} alt="link" />
+                    </a>
+                </div>
+            </div>
+
+            <div ref={item3} className="portfolio-item">
                 <img src={require("../../static/img/portfolio2.png")} alt="portfolio-2" className="portfolio-img"/>
                 <div className="portfolio-overlay">
                     <h3>kacperadamski.pl</h3>
