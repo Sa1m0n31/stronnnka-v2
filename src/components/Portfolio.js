@@ -17,8 +17,8 @@ const Portfolio = () => {
         }
 
         if(width > 700) {
-            gsap.set([item1.current, item2.current, item3.current], {scale: 0, opacity: 0});
-            gsap.to([item1.current, item2.current, item3.current], {
+            gsap.set([item1.current, item2.current, item3.current, item4.current], {scale: 0, opacity: 0});
+            gsap.to([item1.current, item2.current, item3.current, item4.current], {
                 scale: 1, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".portfolio",
                     start: "top 50%"
