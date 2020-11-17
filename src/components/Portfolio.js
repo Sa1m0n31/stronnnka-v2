@@ -7,6 +7,7 @@ const Portfolio = () => {
     const item1 = useRef(null);
     const item2 = useRef(null);
     const item3 = useRef(null);
+    const item4 = useRef(null);
     const header = useRef(null);
 
     useEffect(() => {
@@ -68,6 +69,17 @@ const Portfolio = () => {
                     <h3>kacperadamski.pl</h3>
                     <h4>Strona portfolio dla specjalisty ds. marketingu, Pana Kacpra Adamskiego</h4>
                     <a href="https://kacperadamski.pl" rel="noreferrer" target="_blank">
+                        <img src={require("../../static/img/link.png")} alt="link" />
+                    </a>
+                </div>
+            </div>
+
+            <div ref={item4} className="portfolio-item">
+                <img src={require("../../static/img/portfolio-4.png")} alt="portfolio-4" className="portfolio-img"/>
+                <div className="portfolio-overlay">
+                    <h3>Wizytówki</h3>
+                    <h4>Wizytówki dla firmy Olkop</h4>
+                    <a href="https://imgur.com/a/4K74cyi?fbclid=IwAR1ykqaDvrvWoLJWJVlGOmQXOzpLyYXicgVkT7GX2G2b9QdikZHbbIcBjzQ" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/link.png")} alt="link" />
                     </a>
                 </div>
