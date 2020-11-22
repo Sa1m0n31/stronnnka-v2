@@ -25,7 +25,7 @@ export default class Form extends React.Component {
             phoneNumber: "",
             msg: "",
             formError: "",
-            price: 600,
+            price: 800,
             open: false,
             isVerified: false,
             status: "",
