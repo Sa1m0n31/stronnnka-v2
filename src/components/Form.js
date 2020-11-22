@@ -285,19 +285,19 @@ export default class Form extends React.Component {
     handlePrice() {
         switch(this.state.option) {
             case "strona portfolio":
-                if(this.state.standard) this.setState({price: 400});
-                else if(this.state.profesjonalny) this.setState({price: 600});
-                else this.setState({price: 800});
-                break;
-            case "strona firmowa":
                 if(this.state.standard) this.setState({price: 500});
-                else if(this.state.profesjonalny) this.setState({price: 700});
+                else if(this.state.profesjonalny) this.setState({price: 800});
                 else this.setState({price: 1000});
                 break;
+            case "strona firmowa":
+                if(this.state.standard) this.setState({price: 700});
+                else if(this.state.profesjonalny) this.setState({price: 900});
+                else this.setState({price: 1200});
+                break;
             case "sklep internetowy":
-                if(this.state.standard) this.setState({price: 1000});
-                else if(this.state.profesjonalny) this.setState({price: 1500});
-                else this.setState({price: 2000});
+                if(this.state.standard) this.setState({price: 1500});
+                else if(this.state.profesjonalny) this.setState({price: 2000});
+                else this.setState({price: 2500});
                 break;
             default:
                 break;
