@@ -23,8 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/img/skylo-portfolio5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\sajmo\Desktop\Programowanie\Projekty\stronnnka\node_modules\prettier" />
@@ -120,6 +123,18 @@
       <workItem from="1605630848323" duration="1190000" />
       <workItem from="1606073009896" duration="15000" />
       <workItem from="1606073026533" duration="312000" />
+      <workItem from="1606073570373" duration="386000" />
+      <workItem from="1606198122589" duration="59000" />
+      <workItem from="1606199043049" duration="965000" />
+      <workItem from="1606201753360" duration="265000" />
+      <workItem from="1606202346110" duration="8000" />
+      <workItem from="1606948930194" duration="538000" />
+      <workItem from="1606950290313" duration="604000" />
+      <workItem from="1606998317770" duration="21000" />
+      <workItem from="1607084704850" duration="19000" />
+      <workItem from="1607086111450" duration="132000" />
+      <workItem from="1607347545153" duration="13000" />
+      <workItem from="1607381977194" duration="371000" />
     </task>
     <servers />
   </component>
@@ -143,18 +158,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601931419672" />
-    <state x="686" y="212" key="FileChooserDialogImpl" timestamp="1606073023063">
+    <state x="686" y="212" key="FileChooserDialogImpl" timestamp="1607382021786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604066438052" />
-    <state x="686" y="212" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606073023063" />
+    <state x="686" y="212" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607382021786" />
     <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1602613805207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602613805207" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603924359265">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="539" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1607382147412">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603924359265" />
+    <state x="539" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607382147412" />
   </component>
 </project>

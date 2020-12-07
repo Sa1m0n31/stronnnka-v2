@@ -38,14 +38,14 @@ const LandingPage = () => {
     slider: file(relativePath: { eq: "slider.png" }) {
         childImageSharp {
             fluid(maxWidth: 2000, maxHeight: 1200) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_noBase64
             }
         }
     }
     sliderMobile: file(relativePath: { eq: "gwiazdy.png" }) {
         childImageSharp {
             fluid(maxWidth: 717, maxHeight: 812) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_noBase64
             }
         }
     }
@@ -73,7 +73,7 @@ const LandingPage = () => {
         <div ref={up} className="arrow-up-container" onClick={() => goTo("top")}>
             <img src={require("../../static/img/arrow-up.png")} alt="do-gory" className="arrow-up no-select"/>
         </div>
-        {mobile ? <Img fluid={data.sliderMobile.childImageSharp.fluid} alt="Slider" /> : <Img fluid={data.slider.childImageSharp.fluid} alt="Slider" imgStyle={{objectPosition: "10% 10%"}}/>}
+        {mobile ? <Img loading="eager" fluid={data.sliderMobile.childImageSharp.fluid} alt="Slider" /> : <Img loading="eager" fluid={data.slider.childImageSharp.fluid} alt="Slider" imgStyle={{objectPosition: "10% 10%"}}/>}
         <Menu />
         <div className="landing-container">
             <div className="landing-inner">
