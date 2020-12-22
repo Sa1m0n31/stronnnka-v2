@@ -52,7 +52,7 @@ export default class Form extends React.Component {
 
     componentDidMount() {
         Modal.setAppElement('.form-section');
-        loadReCaptcha("6LccndkZAAAAAF6nVrqQBncXMnOlHkickBIczXwR");
+        loadReCaptcha("6LcUdhAaAAAAALQDSgD8MAPg2x4mJErcgrRo9sue");
         gsap.registerPlugin(ScrollTrigger);
 
         let width;
@@ -377,7 +377,7 @@ export default class Form extends React.Component {
                         </div>
                         <div className="recaptcha">
                             <ReCaptcha
-                                sitekey="6LccndkZAAAAAF6nVrqQBncXMnOlHkickBIczXwR"
+                                sitekey="6LcUdhAaAAAAALQDSgD8MAPg2x4mJErcgrRo9sue"
                                 render="implicit"
                                 verifyCallback={this.verifyCallback}
                             />
