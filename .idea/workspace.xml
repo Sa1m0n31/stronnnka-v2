@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/static/sass/mobile.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/mobile.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +137,7 @@
       <workItem from="1609857995267" duration="364000" />
       <workItem from="1609948702940" duration="1201000" />
       <workItem from="1609971805627" duration="28000" />
-      <workItem from="1612435994620" duration="995000" />
+      <workItem from="1612435994620" duration="1643000" />
     </task>
     <servers />
   </component>
