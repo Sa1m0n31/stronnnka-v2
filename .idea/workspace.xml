@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/img/skylo-portfolio6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/sass/style.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +75,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\skylo-pl\static\img" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\stronnnka\static\img" />
     </key>
   </component>
@@ -137,7 +136,7 @@
       <workItem from="1609857995267" duration="364000" />
       <workItem from="1609948702940" duration="1201000" />
       <workItem from="1609971805627" duration="28000" />
-      <workItem from="1612435994620" duration="379000" />
+      <workItem from="1612435994620" duration="683000" />
     </task>
     <servers />
   </component>
