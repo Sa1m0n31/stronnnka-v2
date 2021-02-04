@@ -9,6 +9,7 @@ const Portfolio = () => {
     const item3 = useRef(null);
     const item4 = useRef(null);
     const item5 = useRef(null);
+    const item6 = useRef(null);
     const header = useRef(null);
 
     useEffect(() => {
@@ -18,8 +19,8 @@ const Portfolio = () => {
         }
 
         if(width > 700) {
-            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current], {scale: 0, opacity: 0});
-            gsap.to([item1.current, item2.current, item3.current, item4.current, item5.current], {
+            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], {scale: 0, opacity: 0});
+            gsap.to([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], {
                 scale: 1, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".portfolio",
                     start: "top 50%"
@@ -92,6 +93,17 @@ const Portfolio = () => {
                     <h3>drokam-studio.pl</h3>
                     <h4>Strona internetowa firmy DROKAM</h4>
                     <a href="https://drokam-studio.pl" rel="noreferrer" target="_blank">
+                        <img src={require("../../static/img/link.png")} alt="link" />
+                    </a>
+                </div>
+            </div>
+
+            <div ref={item6} className="portfolio-item">
+                <img src={require("../../static/img/skylo-portfolio6.jpg")} alt="skylo-portfolio-6" className="portfolio-img"/>
+                <div className="portfolio-overlay">
+                    <h3>skmponz.bydgoszcz.pl</h3>
+                    <h4>Strona internetowa Stowarzyszenia Kombatantów Misji Pokojowych ONZ z Bydgoszczy</h4>
+                    <a href="https://skmponz.bydgoszcz.pl" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/link.png")} alt="link" />
                     </a>
                 </div>
