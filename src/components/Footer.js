@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="footer-bottom">
-            <h6>Copyright &copy; Skylo.pl 2020</h6>
+            <h6>Copyright &copy; Skylo.pl { new Date().getFullYear() }</h6>
         </div>
     </footer>);
 };
