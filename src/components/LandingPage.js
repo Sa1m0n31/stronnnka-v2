@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image';
+import axios from 'axios';
 
 import { gsap, ScrollTrigger } from "gsap/all";
 
@@ -28,6 +29,13 @@ const LandingPage = () => {
 
         gsap.set([h1.current, h2.current, btn.current], { y: -200, opacity: 0 });
         gsap.to([h1.current, h2.current, btn.current], { y: 0, opacity: 1, duration: 1.5 });
+
+        /* TEST - call netlify function */
+        axios.post("/.netlify/functions/sendgrid")
+            .then(res => {
+                console.log(res);
+            });
+
 
     }, []);
 

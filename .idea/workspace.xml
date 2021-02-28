@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/img/skylo-portfolio7.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../massage-gun" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\sajmo\Desktop\Programowanie\Projekty\stronnnka\node_modules\prettier" />
@@ -141,6 +139,10 @@
       <workItem from="1612435994620" duration="4342000" />
       <workItem from="1612632586899" duration="17000" />
       <workItem from="1613384562685" duration="577000" />
+      <workItem from="1613392300095" duration="20000" />
+      <workItem from="1613692878799" duration="665000" />
+      <workItem from="1614283800314" duration="19000" />
+      <workItem from="1614283879520" duration="12000" />
     </task>
     <servers />
   </component>
@@ -160,10 +162,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="686" y="212" key="FileChooserDialogImpl" timestamp="1613385143541">
+    <state x="686" y="212" key="FileChooserDialogImpl" timestamp="1614283818373">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="212" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613385143541" />
+    <state x="686" y="212" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614283818373" />
     <state x="539" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1608639588587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
