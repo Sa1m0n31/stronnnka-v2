@@ -30,12 +30,6 @@ const LandingPage = () => {
         gsap.set([h1.current, h2.current, btn.current], { y: -200, opacity: 0 });
         gsap.to([h1.current, h2.current, btn.current], { y: 0, opacity: 1, duration: 1.5 });
 
-        /* TEST - call netlify function */
-        axios.post("/.netlify/functions/sendgrid")
-            .then(res => {
-                console.log(res);
-            });
-
 
     }, []);
 
