@@ -23,8 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e289ff9-67b6-41f4-a5c0-ee41448dd203" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/helpers/portfolioItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/hotic-polska.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/przedszkole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/twoj-mecenas.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\sajmo\Desktop\Programowanie\Projekty\stronnnka\node_modules\prettier" />
@@ -76,6 +81,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\skylo\skylo\skylo-pl\static\img" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\skylo-pl\static\img" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\stronnnka\static\img" />
     </key>
@@ -145,6 +151,7 @@
       <workItem from="1614283800314" duration="19000" />
       <workItem from="1614283879520" duration="12000" />
       <workItem from="1614472491462" duration="693000" />
+      <workItem from="1617382039240" duration="822000" />
     </task>
     <servers />
   </component>

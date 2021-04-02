@@ -10,6 +10,9 @@ const Portfolio = () => {
     const item4 = useRef(null);
     const item5 = useRef(null);
     const item6 = useRef(null);
+    const item7 = useRef(null);
+    const item8 = useRef(null);
+    const item9 = useRef(null);
     const header = useRef(null);
 
     useEffect(() => {
@@ -19,8 +22,8 @@ const Portfolio = () => {
         }
 
         if(width > 700) {
-            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], {scale: 0, opacity: 0});
-            gsap.to([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current], {
+            gsap.set([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current, item7.current, item8.current, item9.current], {scale: 0, opacity: 0});
+            gsap.to([item1.current, item2.current, item3.current, item4.current, item5.current, item6.current, item7.current, item8.current, item9.current], {
                 scale: 1, opacity: 1, duration: .5, scrollTrigger: {
                     trigger: ".portfolio",
                     start: "top 50%"
@@ -104,6 +107,39 @@ const Portfolio = () => {
                     <h3>skmponz.bydgoszcz.pl</h3>
                     <h4>Strona internetowa Stowarzyszenia Kombatantów Misji Pokojowych ONZ z Bydgoszczy</h4>
                     <a href="https://skmponz.bydgoszcz.pl" rel="noreferrer" target="_blank">
+                        <img src={require("../../static/img/link.png")} alt="link" />
+                    </a>
+                </div>
+            </div>
+
+            <div ref={item6} className="portfolio-item">
+                <img src={require("../../static/img/hotic-polska.jpg")} alt="skylo-hotic-polska" className="portfolio-img"/>
+                <div className="portfolio-overlay">
+                    <h3>hotic-polska.pl</h3>
+                    <h4>Sklep internetowy polskiego dystrybutora pistoletów masujących firmy Hotic</h4>
+                    <a href="https://hotic-polska.pl" rel="noreferrer" target="_blank">
+                        <img src={require("../../static/img/link.png")} alt="link" />
+                    </a>
+                </div>
+            </div>
+
+            <div ref={item6} className="portfolio-item">
+                <img src={require("../../static/img/przedszkole.jpg")} alt="skylo-przedszkole-i-zlobek" className="portfolio-img"/>
+                <div className="portfolio-overlay">
+                    <h3>przedszkoleswarzedz.pl</h3>
+                    <h4>Strona internetowa Przedszkola i Żłobka Nauki i Sztuki w Swarzędzu</h4>
+                    <a href="https://przedszkoleswarzedz.pl" rel="noreferrer" target="_blank">
+                        <img src={require("../../static/img/link.png")} alt="link" />
+                    </a>
+                </div>
+            </div>
+
+            <div ref={item6} className="portfolio-item">
+                <img src={require("../../static/img/twoj-mecenas.jpg")} alt="skylo-twoj-mecenas" className="portfolio-img"/>
+                <div className="portfolio-overlay">
+                    <h3>twojmecenas.pl</h3>
+                    <h4>Strona internetowa Kancelarii Adwokackiej Twój Mecenas</h4>
+                    <a href="https://twojmecenas.pl" rel="noreferrer" target="_blank">
                         <img src={require("../../static/img/link.png")} alt="link" />
                     </a>
                 </div>
