@@ -109,7 +109,7 @@ const DlaczegoMy = () => {
                     <img src={require("../../static/img/szybkosc-realizacji.svg")} alt="szybkosc-realizacji" />
                 </div>
                 <h4>Szybkość realizacji</h4>
-                <p>Jeśli jakimś cudem nie wyrobimy się w terminie, gwarantujemy -50% od ceny bazowej za każdą dobę spóźnienia.</p>
+                <p>Zależy Ci na czasie? Z nami nie musisz się martwić o dotrzymanie terminu.</p>
             </div>
 
             <img src={require("../../static/img/strzalki4.png")} alt="strzalki" className="arrow4 only-1500" />
